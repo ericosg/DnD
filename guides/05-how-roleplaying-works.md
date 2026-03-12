@@ -10,20 +10,20 @@ Combat might be 30-40% of a D&D session. The rest is **roleplaying** — talking
 
 You speak *as* your character. First person.
 
-> **You:** "I don't trust this merchant. His hands are shaking."
-> **You:** *knocks on the tavern door* "We're looking for a man named Aldric. I suggest you cooperate."
+> **Player:** "I don't trust this merchant. His hands are shaking."
+> **Player:** *knocks on the tavern door* "We're looking for a man named Aldric. I suggest you cooperate."
 
 ### Out of Character (OOC)
 
 You speak as yourself, the player. Talking about the game.
 
-> **You:** "Can I roll Insight to see if he's lying?"
-> **You:** "I want to search the room — what do I roll?"
-> **You:** "Hey, should we rest before going into the dungeon?"
+> **Player:** "Can I roll Insight to see if he's lying?"
+> **Player:** "I want to search the room — what do I roll?"
+> **Player:** "Hey, should we rest before going into the dungeon?"
 
 Both are normal. Both happen constantly. You'll naturally shift between them. There is **no requirement** to speak in character 100% of the time — or even most of the time. Plenty of great players mostly describe what their character does in third person:
 
-> **You:** "My character stays quiet and watches the merchant's body language."
+> **Player:** "My character stays quiet and watches the merchant's body language."
 
 That's perfectly fine. Do what feels comfortable. You'll find your voice over a few sessions.
 
@@ -40,16 +40,12 @@ Covered in the previous guide. Turn-based, dice-heavy, tactical.
 Moving through the world. Traveling, entering dungeons, discovering locations. The DM describes what you see, and you decide where to go and what to investigate.
 
 Common exploration moments:
-- "There's a locked chest in the corner." → *Do you pick the lock? Force it open? Ignore it?*
-- "The corridor splits left and right." → *Which way?*
-- "You hear running water behind the wall." → *Do you investigate?*
-- "The forest path is overgrown and hard to follow." → *Survival check to navigate.*
+- "There's a locked chest in the corner." -- *Do you pick the lock? Force it open? Ignore it?*
+- "The corridor splits left and right." -- *Which way?*
+- "You hear running water behind the wall." -- *Do you investigate?*
+- "The forest path is overgrown and hard to follow." -- *Survival check to navigate.*
 
-As a Rogue, you shine here. You're the one who:
-- Scouts ahead (Stealth)
-- Checks for traps (Perception / Investigation)
-- Picks locks (Thieves' Tools proficiency — Rogues get this free)
-- Climbs walls and squeezes through windows (Acrobatics)
+Every class brings something different to exploration. A Rogue scouts ahead and picks locks. A Ranger tracks creatures and navigates the wild. A Wizard identifies magical items and deciphers arcane writing. Think about what your character would notice or try.
 
 ### 3. Social Interaction
 Talking to NPCs. Negotiating, persuading, deceiving, interrogating, bartering, gathering information.
@@ -63,8 +59,6 @@ Good: "I want to convince the guard to let us through. I'll tell him we're on of
 
 The DM may then say: "Roll Persuasion" or "Roll Deception" depending on whether it's true. Your dice + modifier do the heavy lifting. You don't have to be a great actor — you just have to know what your character is *trying* to do.
 
-**For your character specifically:** A Silent Cord operative would be economical with words. Observing more than speaking. When they do speak, it's precise and deliberate. This is actually *easier* to roleplay as a new player — you have permission to be the quiet one who watches.
-
 ---
 
 ## Common Social Skill Checks
@@ -74,10 +68,10 @@ The DM may then say: "Roll Persuasion" or "Roll Deception" depending on whether 
 | **Persuasion** | Convincing someone through truth, logic, or charm | "These bandits threaten your village too. Help us and we help you." |
 | **Deception** | Lying convincingly | "We're inspectors sent by the duke." (You're not.) |
 | **Intimidation** | Threatening or coercing | "Tell me where the hideout is, or this gets unpleasant." |
-| **Insight** | Reading someone — are they lying, nervous, hiding something? | "DM, does this guy seem genuine?" → "Roll Insight." |
+| **Insight** | Reading someone — are they lying, nervous, hiding something? | "DM, does this guy seem genuine?" -- "Roll Insight." |
 | **Performance** | Entertaining, acting, creating a distraction | "I play my flute to distract the crowd while my ally sneaks past." |
 
-Your character will likely use **Insight** more than Persuasion or Deception. You read people. You notice the twitch, the glance toward the back door, the hand moving to a concealed weapon. With high WIS and proficiency in Insight, you're the party's lie detector.
+Which of these your character uses most will depend on their personality and ability scores. A high-Charisma Bard might lean on Persuasion and Deception. A high-Wisdom Cleric might rely on Insight to read people. A high-Strength Barbarian might default to Intimidation. Play to your strengths.
 
 ---
 
@@ -103,14 +97,14 @@ The DM calls for a check when the outcome is uncertain. Not everything requires 
 
 You don't need a psychology degree. Just pick three things about your character:
 
-1. **A habit or mannerism** — What do they do when thinking? Fidget with a blade? Go very still? Tilt their head?
-2. **A value** — What do they care about? Discipline? Loyalty? Freedom? Justice?
-3. **A limit** — What won't they do? Kill innocents? Betray a contract? Show weakness?
+1. **A habit or mannerism** — What do they do when thinking? Fidget with something? Go very still? Crack their knuckles?
+2. **A value** — What do they care about? Honor? Loyalty? Freedom? Knowledge? Justice?
+3. **A limit** — What won't they do? Kill innocents? Break an oath? Abandon a friend? Show weakness?
 
-For your Silent Cord operative, maybe:
-1. **Mannerism:** Sits with their back to the wall. Always knows the exits.
-2. **Value:** Precision — hates waste, chaos, and sloppy work.
-3. **Limit:** Won't kill someone who doesn't deserve it. The order trained them to *correct*, not slaughter.
+A few examples:
+- A Paladin who always stands between danger and the innocent, values duty above all, and refuses to break a sworn promise.
+- A Warlock who taps their fingers when nervous, values knowledge and secrets, and won't reveal the terms of their pact.
+- A Ranger who speaks to animals more comfortably than people, values the natural world, and won't leave the wilderness burning behind them.
 
 That's enough to make decisions in character for an entire campaign.
 
@@ -126,9 +120,9 @@ Sometimes the answer is suboptimal. Your character might refuse a bribe on princ
 
 ### You Don't Have to Talk a Lot
 
-Some of the most memorable D&D characters are the quiet ones. The Rogue who says nothing for twenty minutes, then drops a single devastating observation. The fighter who lets their sword do the talking. Silence is a valid character choice and it lands *hard* when you do speak up.
+Some of the most memorable D&D characters are the quiet ones. The character who says nothing for twenty minutes, then drops a single devastating observation. The fighter who lets their sword do the talking. Silence is a valid character choice and it lands *hard* when you do speak up.
 
-Your character is a trained operative who speaks when there's something worth saying. Lean into that.
+If your character is the strong-and-silent type, or the careful observer, lean into that. You don't need to fill every silence.
 
 ---
 
@@ -136,15 +130,15 @@ Your character is a trained operative who speaks when there's something worth sa
 
 ### Don't Be "That Guy"
 
-The single most common new player mistake is creating a loner edgelord who refuses to cooperate with the party. Yes, your character is a secretive ninja. But D&D is a team game.
+The single most common new player mistake is creating a loner character who refuses to cooperate with the party. D&D is a team game.
 
 The fix is simple: **give your character a reason to care about these people.**
 
 Maybe:
-- The party reminds you of your training cohort. You protect your unit.
-- You're in a foreign land. These people are your only allies.
+- The party saved your life. You owe a debt.
+- You're in a dangerous land. These people are your only allies.
 - Someone in the party earned your respect through action.
-- The order taught you: a lone thread is weak. A cord is strong.
+- You've been alone long enough. This group feels like something worth protecting.
 
 You can be mysterious and reserved while still being a **team player**.
 
@@ -152,14 +146,13 @@ You can be mysterious and reserved while still being a **team player**.
 
 "Don't split the party" is the classic D&D advice, and it's mostly true. When the group separates, the DM has to run two scenes at once and half the table sits idle.
 
-That said, a Rogue scouting 60 feet ahead while the party waits? That's not splitting the party — that's doing your job. Just keep it brief and stay in communication range.
+That said, brief splits can make sense — a character scouting ahead, someone visiting a shop while others visit the tavern. Just keep it brief.
 
 ### Sharing the Spotlight
 
-Every player should get moments to shine. As a skill-heavy Rogue, you'll be useful *a lot* — lockpicking, trap-finding, scouting, reading people. Be careful not to jump in on everything. If the Barbarian wants to try to intimidate someone, let them. If the Wizard wants to investigate the arcane runes, step back.
+Every player should get moments to shine. If your character has a lot of useful skills, be careful not to jump in on everything. If the Barbarian wants to try intimidating someone, let them. If the Wizard wants to investigate the arcane runes, step back.
 
-Your moments: stealth, traps, locks, observation, precision.
-Their moments: everything else.
+Think about what's *your* character's specialty and let other characters own theirs.
 
 ---
 
@@ -188,7 +181,7 @@ Keep a small notebook or note page during the session. Write down:
 - **Location names** — Same.
 - **Quest objectives** — What were you asked to do? By whom? For what reward?
 - **Clues and details** — The throwaway detail the DM mentioned might be important later.
-- **Things your character noticed** — With high Perception and Insight, you'll pick up on things. Note them.
+- **Things your character noticed** — Jot down anything that seemed significant.
 
 Being the player who remembers the name of the innkeeper from three sessions ago makes you an MVP at the table.
 
@@ -200,24 +193,24 @@ To make this concrete, here's what a social encounter might look like:
 
 > **DM:** "You enter the tavern. It's dimly lit, smells of pipe smoke and stale beer. A half-orc bartender is wiping mugs. In the corner, a cloaked figure is nursing a drink alone. What do you do?"
 >
-> **Fighter:** "I go to the bar and order an ale. I'll chat up the bartender, see if anything interesting is going on in town."
+> **Player A (Fighter):** "I go to the bar and order an ale. I'll chat up the bartender, see if anything interesting is going on in town."
 >
-> **You (the Rogue):** "I find a seat where I can see the whole room — especially the cloaked figure. I want to observe them. Are they nervous? Armed? Watching anyone?"
+> **Player B (Ranger):** "I find a seat where I can see the whole room — especially the cloaked figure. I want to observe them. Are they nervous? Armed? Watching anyone?"
 >
 > **DM:** "Roll Perception."
 >
-> **You:** *rolls 18 total*
+> **Player B:** *rolls 18 total*
 >
 > **DM:** "You notice the cloaked figure has a dagger concealed in their boot, and they keep glancing toward the back door. Their drink is untouched — they're not here to drink."
 >
-> **You:** "I note that and keep watching. I don't approach yet."
+> **Player B:** "I note that and keep watching. I don't approach yet."
 >
-> **Cleric:** "I want to go talk to the cloaked figure."
+> **Player C (Cleric):** "I want to go talk to the cloaked figure."
 >
-> **You (OOC):** "Before you do — I noticed they're armed and watching the back door. Might be waiting for someone. Be careful."
+> **Player B (OOC):** "Before you do — I noticed they're armed and watching the back door. Might be waiting for someone. Be careful."
 
-That's roleplaying. No dramatic monologue needed. You observed, processed, and shared useful information with your party. Perfectly in character for a trained operative.
+That's roleplaying. No dramatic monologue needed. One player observed, processed, and shared useful information with the party. Another started gathering intel from the locals. Another decided to make direct contact. Everyone contributed in a way that fit their character.
 
 ---
 
-**Next up: Etiquette & Table Tips** — the unwritten rules that make you a great player on day one.
+**Next up: [Etiquette & Table Tips](06-etiquette-and-table-tips.md)** — the unwritten rules that make you a great player on day one.

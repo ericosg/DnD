@@ -1,49 +1,72 @@
-# D&D 5th Edition — First-Timer's Guide
+# D&D 5th Edition — First-Timer's Complete Guide
 
-A practical guide for new D&D players coming from video games (Baldur's Gate 3) and board games (HeroQuest). Built as a learning path from zero knowledge to table-ready, with a cheat sheet to bring to your first session.
+A free, practical guide for learning Dungeons & Dragons 5th Edition from scratch. Built for players coming from video games (Baldur's Gate 3, etc.) and board games, but useful for anyone sitting down at a D&D table for the first time.
 
-This guide also includes a worked character concept — a ninja-inspired Rogue built around the Forgotten Realms' Kara-Tur lore — as an example of how flavor, backstory, and mechanics come together.
+This repository includes:
+- A **step-by-step tutorial** that takes you from "what even is D&D?" to table-ready
+- **Reference documents** covering feats, backgrounds, skills, and equipment
+- A **fully worked example character** showing how all the pieces come together
+- A **prompt template** for recreating this entire learning journey with an AI assistant
 
 ---
 
-## The Guide
+## Tutorial — Start Here
 
-Read these in order. Each builds on the last.
+Read these in order. Each guide builds on the last.
 
-### [00 — Hosting & Setup](00-hosting-and-setup.md)
-Table setup, seating, what to buy, what the DM needs, and hosting tips for running the game at your place.
+| # | Guide | What You'll Learn |
+|---|---|---|
+| 00 | [Hosting & Setup](guides/00-hosting-and-setup.md) | Table setup, seating, what to buy, what the DM needs |
+| 01 | [What Is D&D?](guides/01-what-is-dnd.md) | The big picture, core mechanics, key terms, dice notation |
+| 02 | [Ability Scores & Skills](guides/02-ability-scores-and-skills.md) | The six stats, modifiers, proficiency, advantage/disadvantage |
+| 03 | [Races & Classes](guides/03-races-and-classes.md) | Every race and class explained, with first-timer recommendations |
+| 04 | [How Combat Works](guides/04-how-combat-works.md) | Initiative, action economy, attacks, damage, death saves |
+| 05 | [How Roleplaying Works](guides/05-how-roleplaying-works.md) | Social encounters, in-character play, party dynamics |
+| 06 | [Etiquette & Table Tips](guides/06-etiquette-and-table-tips.md) | Unwritten rules that make you a great player on day one |
+| 07 | [Cheat Sheet](guides/07-cheat-sheet.md) | Print-and-bring reference for your first session |
 
-### [01 — What Is D&D?](01-what-is-dnd.md)
-The big picture. How D&D compares to video games and board games, the core d20 mechanic, key terminology (DM, PC, NPC, DC), dice notation, what a "setting" is, and what a "backstory" is.
+---
 
-### [02 — Ability Scores & Skills](02-ability-scores-and-skills.md)
-The six ability scores (STR, DEX, CON, INT, WIS, CHA), how modifiers work, the full skill list, proficiency bonus, saving throws, advantage/disadvantage, and passive scores.
+## Reference Documents
 
-### [03 — Races & Classes](03-races-and-classes.md)
-Every core race and class explained with BG3 companion comparisons, complexity ratings, and first-timer recommendations. Organized by playstyle: martial, caster, and hybrid.
+Detailed lookups for character creation. Use these when you're building your character and need to compare options.
 
-### [04 — Character Concept: The Ninja Rogue](04-character-concept-ninja-rogue.md)
-A worked example of building a character concept. Covers the Kara-Tur setting (Forgotten Realms' East Asia), the Shou diaspora on the Sword Coast, a custom monastic assassin order (The Silent Cord), and how it all maps to a Variant Human Assassin Rogue mechanically.
+| Document | What It Covers |
+|---|---|
+| [Feats](reference/feats.md) | Every feat in 5e with descriptions, prerequisites, and class recommendations |
+| [Backgrounds](reference/backgrounds.md) | All backgrounds with skills, features, and which character archetypes they fit |
+| [Skills](reference/skills.md) | Complete skill list — what each skill does, when the DM calls for it, practical examples |
+| [Equipment](reference/equipment.md) | Weapons, armor, adventuring gear, mounts, and costs |
 
-### [05 — How Combat Works](05-how-combat-works.md)
-Initiative, the action economy, attack rolls, damage, critical hits, dual wielding rules, conditions, death saving throws, opportunity attacks, cover, and Rogue-specific tactics.
+---
 
-### [06 — How Roleplaying Works](06-how-roleplaying-works.md)
-In-character vs. out-of-character speech, the three pillars of play (combat, exploration, social), how ability checks work in conversation, practical tips for roleplaying a quiet/reserved character, party dynamics, and a sample scene.
+## Example Build — The Ninja Rogue
 
-### [07 — Etiquette & Table Tips](07-etiquette-and-table-tips.md)
-The unwritten rules. Paying attention, planning your turn, phone etiquette, not rules-lawyering, sharing the spotlight, PvP boundaries, scheduling, and what to expect at your very first session.
+A fully realized character built using this guide, showing how race, class, background, lore, backstory, and mechanics come together into a cohesive concept.
 
-### [08 — Cheat Sheet](08-cheat-sheet.md)
-A print-and-bring reference covering: the core rule, modifiers table, turn structure, Rogue abilities (Sneak Attack, Cunning Action, Assassinate, Uncanny Dodge, Evasion), attack rolls, conditions, death saves, cover, rest rules, distances, and useful DM interaction phrases.
+| Document | Contents |
+|---|---|
+| [Character Concept](example-build/README.md) | Kara-Tur lore, the Silent Cord monastic order, and how it maps to game mechanics |
+| [Character Sheet](example-build/character-sheet.md) | Complete level 1 sheet with stats, skills, equipment, and combat turn templates |
+| [Backstory](example-build/backstory.md) | In-character narrative + structured DM notes with hooks and open threads |
+
+---
+
+## Build Your Own Character With AI
+
+Want to recreate this experience? The [prompt template](prompt.md) walks you (or an AI assistant) through the entire process step by step — from learning the basics to producing a finished character sheet, backstory, and personalized cheat sheet.
+
+You can use it with [Claude Code](https://claude.com/claude-code), ChatGPT, or any AI assistant that can create files.
 
 ---
 
 ## How This Was Made
 
-This guide was built conversationally with [Claude Code](https://claude.com/claude-code) — starting from "I've never played D&D, where do I begin?" and iterating through questions, character concept development, and tailored explanations. The Rogue build is intentionally flavor-first rather than min-maxed, prioritizing a unique character over raw efficiency.
+This guide was built conversationally with [Claude Code](https://claude.com/claude-code) — starting from "I've never played D&D, where do I begin?" and iterating through questions, concept development, and character creation. The AI taught the rules, the human made all the creative decisions.
 
----
+## Contributing
+
+Found an error? Want to add your own example build? Pull requests are welcome. If you build a character using this guide and the prompt template, consider adding it to `example-build/` as a showcase.
 
 ## License
 

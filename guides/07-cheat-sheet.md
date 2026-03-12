@@ -4,7 +4,7 @@
 
 ## The Core Rule
 
-**d20 + modifier + proficiency (if proficient) ≥ DC or AC = success**
+**d20 + modifier + proficiency (if proficient) >= DC or AC = success**
 
 That's the entire game.
 
@@ -21,67 +21,31 @@ That's the entire game.
 ## Your Turn in Combat
 
 ```
-┌─────────────────────────────────────────────────┐
-│  MOVEMENT (up to 30 ft., can split before/after) │
-│  1 ACTION (Attack, Dash, Dodge, Hide, Help...)   │
-│  1 BONUS ACTION (if you have one available)      │
-│  1 FREE INTERACTION (draw weapon, open door)     │
-│  1 REACTION (on anyone's turn, once per round)   │
-└─────────────────────────────────────────────────┘
++---------------------------------------------------+
+|  MOVEMENT (up to 30 ft., can split before/after)  |
+|  1 ACTION (Attack, Dash, Dodge, Hide, Help...)    |
+|  1 BONUS ACTION (if you have one available)       |
+|  1 FREE INTERACTION (draw weapon, open door)      |
+|  1 REACTION (on anyone's turn, once per round)    |
++---------------------------------------------------+
 ```
-
----
-
-## Rogue-Specific Quick Reference
-
-### Sneak Attack (1/turn)
-You deal extra damage when:
-- You have **advantage** on the attack, OR
-- An **ally is within 5 ft.** of the target and you don't have disadvantage
-
-| Rogue Level | Sneak Attack Dice |
-|---|---|
-| 1-2 | 1d6 |
-| 3-4 | 2d6 |
-| 5-6 | 3d6 |
-| 7-8 | 4d6 |
-| 9-10 | 5d6 |
-
-### Cunning Action (Bonus Action, level 2+)
-Each turn, pick one for free:
-- **Dash** — double movement
-- **Disengage** — move without provoking opportunity attacks
-- **Hide** — Stealth check to become hidden (sets up advantage next turn)
-
-### Dual Wielding
-- **Action:** Attack with main-hand shortsword → 1d6 + DEX mod (+ Sneak Attack if eligible)
-- **Bonus Action:** Attack with off-hand shortsword → 1d6 only (no DEX mod to damage)
-- If first attack misses, off-hand is your second chance at Sneak Attack
-
-### Assassinate (Level 3, Assassin Subclass)
-- **Advantage** on attack rolls against creatures that haven't taken a turn yet
-- Any hit against a **surprised** creature is an **automatic critical hit**
-
-### Uncanny Dodge (Level 5, Reaction)
-When an attacker you can see hits you, use your reaction to **halve the damage**.
-
-### Evasion (Level 7)
-DEX saving throw for half damage? You take **no damage** on a success, **half on a failure**. Fireball? What fireball?
 
 ---
 
 ## Attack Rolls
 
 ```
-d20 + ability mod + proficiency bonus  ≥  target's AC  =  HIT
+d20 + ability mod + proficiency bonus  >=  target's AC  =  HIT
 
-Shortsword:   d20 + DEX mod + proficiency
-Damage:       1d6 + DEX mod (main hand)
-              1d6           (off hand)
+Melee weapon:   d20 + STR mod + proficiency  (or DEX for finesse weapons)
+Ranged weapon:  d20 + DEX mod + proficiency
+Spell attack:   d20 + spellcasting mod + proficiency
+
+Damage:  weapon dice + ability mod
 ```
 
 ### Natural 20 = Critical Hit
-Double ALL damage dice (not modifiers). Roll 2d6 instead of 1d6, double Sneak Attack dice too.
+Double ALL damage dice (not modifiers).
 
 ### Natural 1 = Automatic Miss
 No matter what your bonus is.
@@ -93,7 +57,7 @@ No matter what your bonus is.
 | Advantage | Disadvantage |
 |---|---|
 | Roll 2d20, take **higher** | Roll 2d20, take **lower** |
-| Hidden attacker, surprised target, ally using Help | Restrained, frightened, attacking while prone |
+| Hidden attacker, target can't see you, ally using Help | Restrained, frightened, attacking while prone |
 
 They cancel each other out. Multiple sources don't stack — one advantage + three disadvantages = just disadvantage, one of each = normal roll.
 
@@ -103,7 +67,7 @@ They cancel each other out. Multiple sources don't stack — one advantage + thr
 
 | Action | Effect |
 |---|---|
-| **Attack** | Make one melee or ranged attack (more with Extra Attack, which Rogues don't get) |
+| **Attack** | Make one melee or ranged attack (more with Extra Attack) |
 | **Dash** | Gain extra movement equal to your speed |
 | **Disengage** | Movement doesn't provoke opportunity attacks |
 | **Dodge** | Attacks against you have disadvantage, advantage on DEX saves |
@@ -111,6 +75,7 @@ They cancel each other out. Multiple sources don't stack — one advantage + thr
 | **Help** | Give an ally advantage on their next roll |
 | **Ready** | Set a trigger: "When X happens, I do Y" (uses your reaction) |
 | **Use an Object** | Drink a potion, activate an item, etc. |
+| **Cast a Spell** | Cast a spell with a casting time of 1 action |
 
 ---
 
@@ -149,7 +114,7 @@ They cancel each other out. Multiple sources don't stack — one advantage + thr
 ## Death Saving Throws (at 0 HP)
 
 ```
-Start of your turn → roll d20 (no modifiers)
+Start of your turn -> roll d20 (no modifiers)
 
   10+  = 1 success       Natural 20 = wake up with 1 HP
   9-   = 1 failure        Natural 1  = 2 failures
@@ -190,6 +155,7 @@ Start of your turn → roll d20 (no modifiers)
 | Standard movement | 30 ft. |
 | Dash | 60 ft. total |
 | Shortbow range | 80 / 320 ft. |
+| Longbow range | 150 / 600 ft. |
 | Darkvision (most races) | 60 ft. |
 | Torch light | 20 ft. bright / 40 ft. dim |
 
@@ -213,8 +179,20 @@ When you don't know what to say, these always work:
 1. **The DM has final say.** Always.
 2. **Describe what you want to do.** The DM tells you what to roll.
 3. **You can try anything.** The dice decide if it works.
-4. **Sneak Attack is once per turn, not once per round.** (Yes, it works on opportunity attacks.)
-5. **Have fun.** If you're not having fun, say something.
+4. **Have fun.** If you're not having fun, say something.
+
+---
+
+## Add Your Own Class Notes Here
+
+This cheat sheet covers universal rules. Every class has unique features you'll want at your fingertips — spell slots, class abilities, resource pools, etc. Use the space below (or the back of a printout) to write down your class-specific quick reference.
+
+Things to add for your class:
+- **Key class features** and what they do (e.g., Rage, Sneak Attack, Channel Divinity, Wild Shape)
+- **Bonus action options** your class gives you
+- **Reaction options** your class gives you
+- **Spell slots / resource tracking** (if applicable)
+- **Damage formulas** for your main attacks
 
 ---
 

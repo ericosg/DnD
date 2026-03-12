@@ -1,18 +1,18 @@
-# What Is D&D? — A Guide for Video Game & Board Game Players
+# What Is D&D? — A Guide for New Players
 
 ## The Elevator Pitch
 
 D&D is a collaborative storytelling game where one person (the **Dungeon Master / DM**) describes the world and controls all the non-player characters (NPCs) and monsters, and everyone else plays a single character (a **Player Character / PC**). There's no board you *must* use, no strict turn order outside of combat, and no "winning." The goal is to have fun telling a story together.
 
-### How It Compares to What You Already Know
+### How It Compares to What You Might Already Know
 
-| Concept | HeroQuest | Baldur's Gate 3 | D&D 5th Edition |
+| Concept | Board Games | Baldur's Gate 3 | D&D 5th Edition |
 |---|---|---|---|
-| Who controls the world? | The quest book / Evil Wizard player | The game engine | The DM (a real person, improvising) |
+| Who controls the world? | The rulebook / game board | The game engine | The DM (a real person, improvising) |
 | Combat | Grid-based, simple moves | Grid/turn-based, complex | Grid optional, turn-based, flexible |
-| Character creation | Pick a hero card | Pick race/class, level up | Same idea — but on paper, with more freedom |
+| Character creation | Pick a character card | Pick race/class, level up | Same idea — but on paper, with more freedom |
 | What can you attempt? | Only what the rules allow | Only what the game coded | **Literally anything you can describe** |
-| Story | Fixed quest | Branching but pre-written | Completely emergent — shaped by player choices |
+| Story | Fixed scenario | Branching but pre-written | Completely emergent — shaped by player choices |
 
 That last row is the big one. In D&D, if you want to try to convince the dragon to let you ride it instead of fighting it, you can *try*. The DM decides how hard that is, you roll dice, and the story unfolds.
 
@@ -38,7 +38,7 @@ Almost everything in D&D works like this:
 
 That's it. That's the core loop. Everything else is flavor on top.
 
-> **BG3 comparison:** This is exactly what happens under the hood in Baldur's Gate 3. You've seen the d20 roll across the screen. The difference is that in tabletop D&D, *you* describe what you're attempting, and the DM decides the DC — there's no pre-programmed list of actions.
+> **If you've played BG3:** This is exactly what happens under the hood in Baldur's Gate 3. The d20 rolls across the screen every time you attempt something. The difference is that in tabletop D&D, *you* describe what you're attempting, and the DM decides the DC — there's no pre-programmed list of actions.
 
 ### Dice Notation
 
@@ -58,7 +58,7 @@ A **setting** is the world your game takes place in. Think of it like choosing b
 
 Common D&D 5e settings include:
 
-- **Forgotten Realms** — The "default." Baldur's Gate is set here. Sword Coast, Waterdeep, Baldur's Gate the city — all Forgotten Realms. If your DM doesn't specify, it's probably this.
+- **Forgotten Realms** — The "default." Baldur's Gate 3 is set here. Sword Coast, Waterdeep, Baldur's Gate the city — all Forgotten Realms. If your DM doesn't specify, it's probably this.
 - **Eberron** — More magicpunk, noir, post-war. Trains powered by elementals. Warforged (living robots).
 - **Ravenloft** — Gothic horror. Vampires, cursed domains, dread.
 - **Homebrew** — The DM made it up. Very common and totally valid.
@@ -92,11 +92,11 @@ That's enough. You can always add more later as the game inspires you.
 
 ---
 
-## Where Do We Begin? — Your Learning Path
+## Your Learning Path
 
-Here's the order we'll tackle things:
+Here's the order these guides cover things:
 
-1. **[✓] What is D&D?** — You're reading it.
+1. **What is D&D?** — You're reading it.
 2. **Ability Scores & Skills** — The six stats and what they do.
 3. **Races & Classes** — Picking *what* you are and *what you do*.
 4. **Building Your Character** — Putting it all on paper (the character sheet).
@@ -111,6 +111,8 @@ Here's the order we'll tackle things:
 
 > **The DM has final say on rules.** If the DM says something works differently than what you read, go with the DM. The game is about fun, not rules-lawyering. You can ask for clarification ("Hey, I thought that spell worked this way — am I reading it wrong?") but never argue. The DM is juggling a lot.
 
-Your Baldur's Gate experience is genuinely helpful — you already understand advantage/disadvantage, ability checks, spell slots, and action economy at an intuitive level. The jump to tabletop is smaller than you think.
+If you've played Baldur's Gate 3, your experience is genuinely helpful — you already understand advantage/disadvantage, ability checks, spell slots, and action economy at an intuitive level. The jump to tabletop is smaller than you might think.
 
-Ready for the next section? Just say the word and we'll cover **Ability Scores & Skills** — the foundation of your character sheet.
+---
+
+**Next up: [Ability Scores & Skills](02-ability-scores-and-skills.md)** — the foundation of your character sheet.

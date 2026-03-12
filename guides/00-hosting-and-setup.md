@@ -25,12 +25,12 @@ Your DM will likely want:
 
 ---
 
-## What YOU Need to Bring / Have
+## What You Need to Bring / Have
 
 ### The Essentials (Must Have)
 | Item | Notes |
 |---|---|
-| **Your character sheet** | We'll build this together. Paper or printed. |
+| **Your character sheet** | Built during character creation (Session Zero or beforehand). Paper or printed. |
 | **A set of dice** | d4, d6, d8, d10, d12, d20, and a percentile d10. A standard set costs ~$5-10. |
 | **A pencil + eraser** | Not a pen. Your HP, spell slots, and inventory change constantly. |
 | **Something to take notes** | A small notebook or scrap paper. Jot down NPC names, quest details, etc. |
@@ -40,7 +40,7 @@ Your DM will likely want:
 |---|---|
 | **A miniature or token** | A little figure to represent your character on a map. A coin, chess piece, or LEGO figure works perfectly. |
 | **Extra d6s** | Some abilities use multiple d6s (like Sneak Attack or Fireball). 4-6 extra d6s are handy. |
-| **Spell cards or printed spell list** | If you play a spellcaster. We'll cover this when we pick your class. |
+| **Spell cards or printed spell list** | If you play a spellcaster. |
 | **A phone/tablet** | For looking up rules on D&D Beyond (dndbeyond.com). Many groups use digital character sheets there. |
 
 ### What You Do NOT Need to Buy

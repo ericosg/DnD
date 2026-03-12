@@ -8,7 +8,7 @@ This is the stuff nobody writes on the character sheet but everyone notices. Fol
 
 ### 1. Pay Attention When It's Not Your Turn
 
-This is the #1 thing that separates good players from frustrating ones. When the Wizard is negotiating with the merchant, don't zone out on your phone. Why:
+This is the #1 thing that separates good players from frustrating ones. When another player is negotiating with the merchant, don't zone out on your phone. Why:
 
 - You might hear information your character needs.
 - Your turn comes faster than you think — if you weren't listening, the table waits while you ask "what's happening?"
@@ -38,7 +38,7 @@ Bring your own set. If you forget, ask before borrowing.
 
 You've been reading these guides. You might know a rule the DM doesn't, or disagree with a ruling. Here's how to handle it:
 
-- **First time:** Mention it briefly. "Hey, I think Sneak Attack works a bit differently — can I show you the text?"
+- **First time:** Mention it briefly. "Hey, I think that rule works a bit differently — can I show you the text?"
 - **If the DM rules differently:** Accept it. Move on. The game continues.
 - **After the session:** Bring it up casually. "Hey, I looked up that rule — want to check it for next time?"
 
@@ -98,7 +98,7 @@ If you need to tell another *character* something secretly, pass a note or text 
 
 ### Things That Will Impress the Table
 
-- Having your character sheet filled out and understanding the basics (you're doing this right now).
+- Having your character sheet filled out and understanding the basics.
 - Writing down NPC names without being told to.
 - Saying "what does my character know about this?" instead of metagaming.
 - Letting other players have their moments.
@@ -109,7 +109,7 @@ If you need to tell another *character* something secretly, pass a note or text 
 
 - Trying to "win" D&D. There's no winning. There's surviving, growing, and telling a great story.
 - Talking over other players or the DM.
-- Insisting on doing everything yourself because your Rogue has the best skills.
+- Insisting on doing everything yourself because your character has the best skills for the job.
 - Spending ten minutes on your turn optimizing the perfect move. Good enough is good enough. Speed matters more than perfection.
 - Saying "my character wouldn't do that" to avoid cooperating with the party. Find a reason your character *would*.
 
@@ -121,13 +121,13 @@ If you need to tell another *character* something secretly, pass a note or text 
 
 Unless your group explicitly agrees, **don't attack other player characters.** Don't steal from them. Don't sabotage them. Even "in character" conflict between PCs should be discussed out of character first.
 
-Your character is a trained assassin. It might be "in character" to steal something from an ally. Don't. It's not fun for the other player. Save the knives for NPCs and monsters.
+It might be "in character" for a shady character to steal from an ally. Don't. It's not fun for the other player. Save the scheming for NPCs and monsters.
 
 ### Character Secrets
 
 It's fine to have a secret backstory. Many characters do. But don't let secrets become walls between you and the party. A secret is fun when it eventually comes out and creates a great story moment. A secret is toxic when it means you're playing a different game from everyone else.
 
-If the Silent Cord's mission conflicts with the party's goals? That's a *story moment* waiting to happen, not a reason to undermine your friends.
+If your character's hidden agenda conflicts with the party's goals, that's a *story moment* waiting to happen, not a reason to undermine your friends.
 
 ### Consent and Boundaries
 
@@ -152,7 +152,7 @@ The #1 killer of D&D campaigns is scheduling. The game requires 3-6 people to be
 
 - **Level up your character** between sessions, not at the table. If you need help, ask the DM or look it up beforehand.
 - **Review your notes.** Five minutes before the next session, skim what happened last time. You'll be sharper than most of the table.
-- **Think about what your character wants to do next.** Not a rigid plan — just a direction. "I want to investigate the thieves' guild" or "I want to find better weapons."
+- **Think about what your character wants to do next.** Not a rigid plan — just a direction. "I want to investigate the thieves' guild" or "I want to find better armor."
 - **Don't pester the DM** with questions between sessions unless they've said they're open to it. They're doing a lot of prep already.
 
 ---
@@ -176,4 +176,4 @@ You don't need to know every rule. You don't need the optimal build. You don't n
 
 ---
 
-**Next up: The Cheat Sheet** — a one-page (ish) reference to bring to the table.
+**Next up: [The Cheat Sheet](07-cheat-sheet.md)** — a one-page (ish) reference to bring to the table.

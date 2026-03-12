@@ -1,6 +1,6 @@
 # Races & Classes — Who Are You?
 
-Two big choices define your character: **race** (what you are) and **class** (what you do). You've made these choices in BG3 — the options are largely the same, but let's walk through them with a tabletop lens.
+Two big choices define your character: **race** (what you are) and **class** (what you do). If you've played BG3, the options are largely the same — but here's a walkthrough with a tabletop lens.
 
 ---
 
@@ -39,7 +39,7 @@ Most races have **subraces** that further specialize:
 
 ### Exotic Races (If Your DM Allows)
 
-These appear in expansion books. You might have seen them in BG3:
+These appear in expansion books and some are available in BG3:
 - **Githyanki** — Astral warriors, great with weapons and psionic powers
 - **Aasimar** — Celestial-touched, healing powers, angelic transformation
 - **Goliath** — Big, tough mountain folk, can shrug off damage
@@ -69,22 +69,22 @@ Your class is the biggest mechanical choice you make. It determines:
 
 ### The 5e Classes at a Glance
 
-I've organized these by playstyle. The "complexity" rating is for the player, not the character — some classes require tracking more resources and making more decisions.
+These are organized by playstyle. The "complexity" rating is for the player, not the character — some classes require tracking more resources and making more decisions.
 
 ---
 
 ### Martial Classes (Weapon-Focused)
 
 #### Fighter
-- **The BG3 comparison:** Lae'zel
-- **What you do:** Hit things. A lot. You're the most versatile martial class — swords, bows, heavy armor, shields, whatever you want.
+- **BG3 Equivalent:** The classic weapon-wielding warrior (Lae'zel's class in BG3)
+- **What you do:** Hit things. A lot. The most versatile martial class — swords, bows, heavy armor, shields, whatever you want.
 - **Key feature:** Action Surge (take a whole extra turn once per short rest), Extra Attacks
 - **Primary stat:** STR or DEX (your choice — heavy armor brawler or nimble duelist)
 - **Complexity:** ★☆☆☆☆ — The simplest class. Great for learning the game.
 - **Best for:** "I want to be effective in combat without tracking a bunch of resources."
 
 #### Barbarian
-- **The BG3 comparison:** Karlach
+- **BG3 Equivalent:** The rage-fueled melee powerhouse (Karlach's class in BG3)
 - **What you do:** Rage. While raging, you take half damage from physical attacks, deal extra damage, and have advantage on STR checks. You're the party's tank.
 - **Key feature:** Rage (limited uses per day), Reckless Attack (advantage on all your attacks, but enemies get advantage on you too)
 - **Primary stat:** STR (with good CON)
@@ -99,7 +99,7 @@ I've organized these by playstyle. The "complexity" rating is for the player, no
 - **Best for:** "I want to be fast and punchy with a mystical flavor."
 
 #### Rogue
-- **The BG3 comparison:** Astarion
+- **BG3 Equivalent:** The sneaky skill expert (Astarion's class in BG3)
 - **What you do:** Sneak, stab, steal, and be incredibly skilled. Your Sneak Attack adds massive damage to one attack per turn when you have advantage or an ally nearby.
 - **Key feature:** Sneak Attack, Expertise (double proficiency in chosen skills), Cunning Action (hide, dash, or disengage as a bonus action every turn)
 - **Primary stat:** DEX
@@ -111,7 +111,7 @@ I've organized these by playstyle. The "complexity" rating is for the player, no
 ### Spellcasting Classes (Magic-Focused)
 
 #### Wizard
-- **The BG3 comparison:** Gale
+- **BG3 Equivalent:** The scholarly arcane caster (Gale's class in BG3)
 - **What you do:** You have the biggest spell list in the game. Fireball, Counterspell, Shield, Fly — the iconic spells are yours. Fragile but incredibly powerful.
 - **Key feature:** Spellbook (you can learn new spells from scrolls), Arcane Recovery (get spell slots back on a short rest)
 - **Primary stat:** INT
@@ -126,7 +126,7 @@ I've organized these by playstyle. The "complexity" rating is for the player, no
 - **Best for:** "I want to be a natural-born spellcaster who bends the rules of magic."
 
 #### Warlock
-- **The BG3 comparison:** Wyll
+- **BG3 Equivalent:** The pact-bound caster (Wyll's class in BG3)
 - **What you do:** You made a pact with a powerful being (demon, fey, eldritch entity) for magic. You have very few spell slots (1-4), but they ALL recharge on a short rest, and Eldritch Blast is the best damage cantrip in the game.
 - **Key feature:** Eldritch Blast + Agonizing Blast invocation (reliable, customizable damage), Pact Boon (special features from your patron)
 - **Primary stat:** CHA
@@ -145,7 +145,7 @@ I've organized these by playstyle. The "complexity" rating is for the player, no
 - **Best for:** "I want to be a tanky warrior who can also heal and obliterate evil."
 
 #### Ranger
-- **The BG3 comparison:** Minsc (loosely)
+- **BG3 Equivalent:** The wilderness martial/caster hybrid (Minsc's class in BG3, loosely)
 - **What you do:** Wilderness expert with martial skills and some nature magic. Good with bows, can have an animal companion (Beast Master subclass), and excels in exploration.
 - **Key feature:** Fighting Style, spellcasting (Hunter's Mark is your bread and butter), Favored Enemy, Natural Explorer
 - **Primary stat:** DEX (and some WIS)
@@ -153,7 +153,7 @@ I've organized these by playstyle. The "complexity" rating is for the player, no
 - **Best for:** "I want to be an archer/tracker with some magic."
 
 #### Cleric
-- **The BG3 comparison:** Shadowheart
+- **BG3 Equivalent:** The divine spellcaster (Shadowheart's class in BG3)
 - **What you do:** Channel divine power from a god. Clerics are the most versatile class in 5e — depending on your subclass (Domain), you can be a healer, a tank in heavy armor, a damage dealer, or a battlefield controller.
 - **Key feature:** Healing, Channel Divinity (powerful domain-specific abilities), full spellcasting, prepare spells daily from the entire Cleric list
 - **Primary stat:** WIS
@@ -209,8 +209,8 @@ At this point, you don't need to lock anything in. But start thinking about:
 2. **Do you want to cast spells?** If yes, how much? (A little = Paladin/Ranger. A lot = Wizard/Cleric/Druid.)
 3. **Do you like being the face of the group** (talking to NPCs) or the **muscle** (solving problems with force)?
 
-Tell me what's catching your eye and I'll help you narrow it down. Or if you already have a character concept in mind — even a vague one like "I want to be like Aragorn" or "I want to be a sneaky magic user" — I can point you in the right direction.
+Once you've got a direction — even a vague one like "I want to be like Aragorn" or "I want to be a sneaky magic user" — you'll have everything you need to start building a character.
 
 ---
 
-**Next up: Building Your Character** — once you pick a race and class, we'll fill out the character sheet step by step.
+**Next up: Building Your Character** — once you pick a race and class, the character sheet comes together step by step.

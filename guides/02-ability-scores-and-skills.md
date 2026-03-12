@@ -2,7 +2,7 @@
 
 ## The Six Ability Scores
 
-Every creature in D&D has six stats. You already know these from Baldur's Gate — they work exactly the same way on tabletop.
+Every creature in D&D has six stats. If you've played Baldur's Gate 3, these are identical — they work exactly the same way on tabletop.
 
 | Ability | What It Represents | High Score Means... | Low Score Means... |
 |---|---|---|---|
@@ -12,9 +12,6 @@ Every creature in D&D has six stats. You already know these from Baldur's Gate �
 | **Intelligence (INT)** | Memory, logic, learning | You know things, solve puzzles, study magic | You're not book-smart |
 | **Wisdom (WIS)** | Perception, intuition, common sense | You notice things, read people, resist tricks | You're oblivious, easily deceived |
 | **Charisma (CHA)** | Force of personality | You persuade, intimidate, lead, cast with flair | You're awkward, unpersuasive |
-
-### BG3 Comparison
-These are identical to BG3. If you built a high-CHA Warlock in Baldur's Gate, you already get it.
 
 ---
 
@@ -36,12 +33,12 @@ Your raw score (like 16) doesn't directly get added to rolls. Instead, it produc
 | 18-19 | +4 |
 | 20 | +5 |
 
-**The formula:** (Score - 10) ÷ 2, rounded down.
+**The formula:** (Score - 10) / 2, rounded down.
 
 - A score of **10 is average** for a commoner.
 - Player characters typically range from **8 to 16** at level 1, occasionally reaching 17-18.
 
-> **Example:** You have 16 Strength. Your modifier is +3. When you swing a sword, you roll d20 + 3 (plus your proficiency bonus — more on that in a moment).
+> **Example:** A character with 16 Strength has a +3 modifier. When they swing a sword, they roll d20 + 3 (plus their proficiency bonus — more on that in a moment).
 
 ---
 
@@ -124,9 +121,9 @@ That +2 matters more than it looks.
 
 Saving throws are like skill checks, but you don't choose to make them — they happen *to* you.
 
-- A dragon breathes fire → **Dexterity saving throw** (dodge the flames)
-- A wizard casts Hold Person → **Wisdom saving throw** (resist the mind control)
-- You eat poisoned food → **Constitution saving throw** (tough it out)
+- A dragon breathes fire --> **Dexterity saving throw** (dodge the flames)
+- A wizard casts Hold Person --> **Wisdom saving throw** (resist the mind control)
+- You eat poisoned food --> **Constitution saving throw** (tough it out)
 
 Each class is proficient in **two** saving throw types. For example:
 - Fighters: Strength & Constitution
@@ -137,7 +134,7 @@ Each class is proficient in **two** saving throw types. For example:
 
 ## Advantage & Disadvantage
 
-You know this from BG3. It's the same.
+If you've played BG3, you already know this — it works the same way.
 
 - **Advantage:** Roll 2d20, take the **higher** result. (Good circumstances.)
 - **Disadvantage:** Roll 2d20, take the **lower** result. (Bad circumstances.)
@@ -154,7 +151,7 @@ Your DM will sometimes use **passive checks** — a flat number that represents 
 
 **Passive Perception = 10 + Perception modifier**
 
-This is what the DM checks against when deciding if you *notice* something without actively looking. If a hidden enemy needs to beat your passive Perception to sneak past you, they roll Stealth against that number.
+This is what the DM checks against when deciding if you *notice* something without actively looking. If a hidden enemy needs to sneak past you, they roll Stealth against your passive Perception.
 
 > You don't roll for passive checks. They're always "on."
 
@@ -162,14 +159,14 @@ This is what the DM checks against when deciding if you *notice* something witho
 
 ## How This Connects to Character Creation
 
-When we build your character, you'll:
+When you build your character, you'll:
 
 1. **Generate six ability scores** (by rolling dice or using a point-buy system)
 2. **Assign them** to STR, DEX, CON, INT, WIS, CHA based on what your class needs
 3. **Pick skill proficiencies** from a list your class and background offer
 4. Your **race** may give +1 or +2 to certain scores (or you can distribute freely with newer rules)
 
-We'll do all of this in the character creation guide. For now, just understand:
+All of this happens step by step in the character creation guide. For now, just understand:
 - **High score = better at that thing**
 - **Modifier = what you add to rolls**
 - **Proficiency = extra bonus in things you're trained in**
@@ -181,7 +178,7 @@ We'll do all of this in the character creation guide. For now, just understand:
 ```
 ROLL = d20 + ability modifier (+ proficiency bonus if proficient)
 
-Score → Modifier:  8=-1  10=0  12=+1  14=+2  16=+3  18=+4
+Score -> Modifier:  8=-1  10=0  12=+1  14=+2  16=+3  18=+4
 
 Proficiency bonus at level 1: +2
 
@@ -191,4 +188,4 @@ Disadvantage: roll 2d20, take lower
 
 ---
 
-**Next up: Races & Classes** — where we start shaping *who* your character actually is.
+**Next up: [Races & Classes](03-races-and-classes.md)** — where you start shaping *who* your character actually is.

@@ -1,6 +1,6 @@
 # How Combat Works — The Turn-by-Turn Breakdown
 
-You know this from BG3. Tabletop combat is the same system, just without the computer doing the math for you.
+If you've played any turn-based RPG, tabletop combat will feel familiar. It's the same core loop — just without a computer doing the math for you.
 
 ---
 
@@ -10,9 +10,9 @@ When a fight breaks out, everyone rolls **initiative** to determine turn order.
 
 **Initiative = d20 + DEX modifier**
 
-> With your build: if you take the **Alert** feat, you add +5 on top of that. With high DEX + Alert, you'll almost always go first. A ninja striking before anyone reacts.
-
 The DM rolls initiative for all enemies. Everyone's rolls are ranked from highest to lowest — that's the turn order for the entire fight. It doesn't change unless a special ability modifies it.
+
+> Some feats and features can boost your initiative further. The **Alert** feat, for example, adds +5 to initiative rolls.
 
 ---
 
@@ -23,71 +23,79 @@ On each of your turns, you get:
 | Resource | What It Is | Examples |
 |---|---|---|
 | **1 Action** | Your main thing | Attack, Dash, Dodge, Hide, Use an Object, Cast a Spell |
-| **1 Bonus Action** | A smaller thing (only if an ability grants one) | Off-hand attack (dual wielding), Cunning Action (Rogue), some spells |
+| **1 Bonus Action** | A smaller thing (only if an ability grants one) | Off-hand attack (dual wielding), certain class features, some spells |
 | **Movement** | Move up to your speed (usually 30 ft.) | Walk, climb, swim. You can split movement before and after your action. |
 | **1 Free Interaction** | A tiny thing | Open a door, draw a weapon, shout a warning |
-| **1 Reaction** | A response on someone else's turn (once per round) | Opportunity attack, the Shield spell, Uncanny Dodge (Rogue feature) |
+| **1 Reaction** | A response on someone else's turn (once per round) | Opportunity attack, the Shield spell, certain class features |
 
-### How This Looks for Your Ninja Rogue
+### Example Turns by Class
 
-A typical combat turn for you:
+What a combat turn looks like depends on your class. Here are three examples:
 
+**Fighter (melee)**
+1. **Move** 20 ft. to reach the nearest enemy.
+2. **Action:** Attack with your longsword. Roll d20 + STR + proficiency. If you hit, roll 1d8 + STR for damage. At level 5, you get **Extra Attack** and swing twice.
+3. **Bonus Action:** If you have the Two-Weapon Fighting style and a light weapon in your off hand, make a second attack. Otherwise, you may not have a bonus action to use — that's fine, not every class uses one every turn.
+4. **After your turn:** If an enemy moves away from you, use your **Reaction** for an opportunity attack.
+
+**Rogue (melee)**
 1. **Move** 15 ft. to flank the enemy.
-2. **Action:** Attack with your main-hand shortsword. Roll d20 + DEX + proficiency. If you hit and have advantage (or an ally is adjacent to the target), add **Sneak Attack** damage.
-3. **Bonus Action:** Attack with your off-hand shortsword (dual wield). If your first attack missed, this is your second chance to land Sneak Attack.
+2. **Action:** Attack with your shortsword. Roll d20 + DEX + proficiency. If you hit and have advantage (or an ally is adjacent to the target), add **Sneak Attack** damage.
+3. **Bonus Action:** You have a choice — attack with an off-hand weapon for a second chance at Sneak Attack, or use **Cunning Action** to Hide or Disengage. This is the Rogue's core tactical decision each turn.
 4. **After your turn:** If an enemy moves away from you, you can use your **Reaction** for an opportunity attack.
 
-Or alternatively:
-
-1. **Action:** Attack with main-hand.
-2. **Bonus Action: Cunning Action — Hide.** Instead of the off-hand attack, you duck behind cover. Now you're hidden. On your next turn, you attack from hiding = advantage = guaranteed Sneak Attack setup.
-
-This is the core tactical decision for dual-wield Rogues: **off-hand attack for a second chance to Sneak Attack, or Cunning Action for positioning/setup?**
+**Wizard (spellcaster)**
+1. **Move** 10 ft. back to stay out of melee range.
+2. **Action:** Cast **Burning Hands** (1st-level spell, 15 ft. cone). Each creature in the area makes a DEX saving throw. On a failure, they take 3d6 fire damage; on a success, half.
+3. **Bonus Action:** Cast **Misty Step** (bonus action spell) to teleport 30 ft. to safety behind cover. Note: if you cast a spell as a bonus action, the only spell you can cast with your action is a cantrip.
+4. **Reaction (later in the round):** An enemy's attack hits you. Cast **Shield** to boost your AC by +5, potentially turning the hit into a miss.
 
 ---
 
 ## Making an Attack Roll
 
 1. Roll **d20**
-2. Add your **ability modifier** (DEX for finesse weapons)
-3. Add your **proficiency bonus** (you're proficient with shortswords)
+2. Add your **ability modifier** (STR for melee, DEX for ranged or finesse weapons)
+3. Add your **proficiency bonus** (if you're proficient with the weapon)
 4. Compare to the target's **AC (Armor Class)**
 5. **Meet or beat AC = hit. Under = miss.**
 
-> Example at level 1: d20 + 3 (DEX) + 2 (proficiency) = d20 + 5.
+> Example at level 1 with a +3 ability modifier and +2 proficiency: d20 + 5.
 > Against an enemy with 15 AC, you need to roll a 10 or higher. That's a 55% chance.
 
 ### Critical Hits and Misses
 
-- **Natural 20** (the die shows 20): Automatic hit, **double all damage dice** (not modifiers). Devastating with Sneak Attack — all those Sneak Attack dice get doubled too.
+- **Natural 20** (the die shows 20): Automatic hit, **double all damage dice** (not modifiers).
 - **Natural 1** (the die shows 1): Automatic miss, regardless of modifiers. Some DMs add comedic fumble effects, but by RAW (Rules As Written) it's just a miss.
 
 ---
 
 ## Damage
 
-When you hit, you roll damage:
+When you hit, you roll damage. The formula depends on your weapon:
 
-**Main-hand shortsword:** 1d6 + DEX modifier
-**Off-hand shortsword:** 1d6 only (you don't add your DEX modifier to off-hand damage unless you have a special feature)
-**Sneak Attack (level 1):** +1d6 (once per turn, scales with level)
+**Melee weapon:** weapon dice + ability modifier (usually STR or DEX)
+**Ranged weapon:** weapon dice + DEX modifier
+**Spell:** as described in the spell (no ability modifier unless the spell says so)
 
-> First-round Assassin example at level 3: You surprise an enemy. Auto-crit.
-> Main-hand: 2d6 (doubled crit) + DEX modifier + Sneak Attack 4d6 (2d6 doubled) = potentially 6d6 + 3. That's an average of **24 damage** in one hit at level 3. Some enemies just drop.
+Some examples:
+- **Longsword:** 1d8 + STR modifier
+- **Shortsword (finesse):** 1d6 + DEX modifier
+- **Longbow:** 1d8 + DEX modifier
+- **Fire Bolt (cantrip):** 1d10 (no modifier)
+
+Class features can add more damage — a Rogue's Sneak Attack, a Paladin's Divine Smite, a Barbarian's Rage bonus, etc.
 
 ---
 
 ## Dual Wielding Rules
 
-Since this is core to your build, here are the specifics:
+If your character fights with two weapons:
 
 1. When you take the **Attack action** with a **light melee weapon** in one hand, you can use your **bonus action** to attack with a different **light** weapon in the other hand.
 2. Both weapons must have the **light** property. Shortswords, scimitars, daggers, and handaxes all qualify.
-3. You **don't add your ability modifier to the off-hand damage** (unless you take the Two-Weapon Fighting style, which Rogues don't normally get).
+3. You **don't add your ability modifier to the off-hand damage** (unless you have the Two-Weapon Fighting fighting style).
 4. You can draw both weapons on the same turn using your free interaction (some DMs are strict about this — technically drawing two weapons requires two interactions. Ask your DM).
-
-**Why dual wield as a Rogue?**
-Not for raw damage — the off-hand hit without a modifier is weak. It's for **reliability**. You get Sneak Attack only once per turn, but if you miss your first attack, the off-hand gives you a second chance. It's insurance.
 
 ---
 
@@ -96,12 +104,12 @@ Not for raw damage — the off-hand hit without a modifier is weak. It's for **r
 | Condition | Effect | How You Get It |
 |---|---|---|
 | **Prone** | Disadvantage on attacks. Melee attacks against you have advantage, ranged have disadvantage. | Knocked down, tripped |
-| **Restrained** | Speed 0, disadvantage on attacks, attacks against you have advantage | Nets, grapples, web spell |
+| **Restrained** | Speed 0, disadvantage on attacks, attacks against you have advantage | Nets, grapples, Web spell |
 | **Poisoned** | Disadvantage on attack rolls and ability checks | Poison, some monster abilities |
 | **Frightened** | Disadvantage on checks/attacks while you can see the source, can't move closer to it | Dragon fear, spells |
 | **Incapacitated** | Can't take actions or reactions | Some spells, being stunned |
 | **Stunned** | Incapacitated + can't move + auto-fail STR/DEX saves + attacks against you have advantage | Monk's Stunning Strike, some spells |
-| **Unconscious** | Out cold. Auto-fail STR/DEX saves, attacks have advantage, melee hits are auto-crits | Dropping to 0 HP, sleep spell |
+| **Unconscious** | Out cold. Auto-fail STR/DEX saves, attacks have advantage, melee hits are auto-crits | Dropping to 0 HP, Sleep spell |
 
 ---
 
@@ -119,7 +127,7 @@ When your HP hits 0, you don't die instantly. You fall **unconscious** and start
 
 If an ally heals you (even 1 HP), you wake up immediately and your death saves reset. This is why having a healer in the party matters.
 
-> **As a Rogue:** You're not tanky. You will go down sometimes. This is fine — it's part of the game. Play smart: use Cunning Action to Disengage or Hide when things get dangerous. Don't stand in the open trading blows with a knight. Strike, then vanish.
+> Every character goes down sometimes. Play smart — use the Dodge or Disengage actions when things get dangerous, use cover, and don't stand in the open trading blows if you can't take the hits. Know when to fight and when to reposition.
 
 ---
 
@@ -134,10 +142,7 @@ If an ally heals you (even 1 HP), you wake up immediately and your death saves r
 | **Help** | Give an ally advantage on their next check or attack | When your attack isn't as useful as helping a heavy hitter |
 | **Ready** | Prepare an action with a trigger ("When the goblin opens the door, I attack") | Ambushes, coordinated plans |
 
-**Rogue advantage:** Cunning Action (level 2) lets you **Dash, Disengage, or Hide** as a **bonus action** instead of your action. This is game-changing. It means you can:
-- Attack AND hide in the same turn
-- Attack AND disengage safely
-- Dash AND dash (bonus + action) to cover enormous ground
+These actions are available to every character. Some classes get features that make certain actions more efficient — for example, a Rogue's Cunning Action lets them Dash, Disengage, or Hide as a bonus action instead of their main action.
 
 ---
 
@@ -147,9 +152,7 @@ When a creature **moves out of your melee reach** (5 ft. for most weapons), you 
 
 This is why **Disengage** exists — it prevents opportunity attacks when you move away.
 
-As a Rogue with Cunning Action, you can Disengage as a bonus action, which means you can freely dance in and out of combat without getting punished. Very ninja.
-
-> **Yes, you can Sneak Attack on an opportunity attack.** It's a separate turn (the enemy's turn), so your once-per-turn Sneak Attack refreshes. This is a known interaction and it's legal. Don't feel bad about it.
+> You can trigger special features on opportunity attacks. For example, a Rogue can use Sneak Attack on an opportunity attack because it happens on a different turn (the enemy's turn), so the once-per-turn limit resets. This is a known interaction and it's legal by the rules.
 
 ---
 
@@ -184,17 +187,12 @@ YOUR TURN:
   1 Action + 1 Bonus Action + Movement (30 ft.) + 1 Free Interaction
   1 Reaction (on anyone's turn, once per round)
 
-ATTACK ROLL:  d20 + ability mod + proficiency ≥ target's AC = hit
-DAMAGE ROLL:  weapon dice + ability mod (no mod on off-hand)
-
-ROGUE SNEAK ATTACK: once per turn, when you have advantage OR
-                     an ally is within 5 ft. of the target
-
-CUNNING ACTION (bonus action): Dash, Disengage, or Hide
+ATTACK ROLL:  d20 + ability mod + proficiency >= target's AC = hit
+DAMAGE ROLL:  weapon dice + ability mod
 
 DEATH SAVES: d20 at start of turn. 10+ = success. 3 successes = stable.
 ```
 
 ---
 
-**Next up: How Roleplaying Works** — what happens between the fights.
+**Next up: [How Roleplaying Works](05-how-roleplaying-works.md)** — what happens between the fights.
