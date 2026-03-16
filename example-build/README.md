@@ -1,6 +1,6 @@
-# Example Build: The Ninja Rogue of Kara-Tur
+# Example Build: The Shadow Archer of Kara-Tur
 
-> **This is an example of a fully realized D&D 5e character, built using the guides in this repository.** It demonstrates how race, class, background, lore, and backstory come together into a cohesive concept. The character presented here — Fusetsu, an Assassin Rogue from the monasteries of Kara-Tur — is meant to be inspiring, not prescriptive. Use it as a reference point for building your own deeply realized character.
+> **This is an example of a fully realized D&D 5e character, built using the guides in this repository.** It demonstrates how race, class, background, lore, and backstory come together into a cohesive concept. The character presented here — Fusetsu, a Gloom Stalker Ranger from the monasteries of Kara-Tur — is meant to be inspiring, not prescriptive. Use it as a reference point for building your own deeply realized character.
 
 ---
 
@@ -57,13 +57,9 @@ Members train from childhood in:
 - **Infiltration** — disguise, social reading, silent movement
 - **Philosophy** — they are not murderers. Each action is weighed. "A single precise cut prevents a thousand wounds."
 
-The order teaches that **wisdom is the true weapon** — the blade is merely its extension. This is the in-world justification for prioritizing WIS as a Rogue. The character isn't just dexterous; they're *perceptive, patient, and deliberate*. They read a room before entering it. They know where the guards are before the guards know they exist.
+The order teaches that **wisdom is the true weapon** — the blade is merely its extension. This is the in-world justification for prioritizing WIS as a Ranger. Fusetsu learned the lessons — she has the awareness, the perception, the instincts — but she hasn't internalized the patience. She reads a room before entering it, then kicks the door in anyway.
 
-**Why the Sword Coast?** That's the hook for the backstory. Some possibilities:
-- Sent on a mission that took them west — and something went wrong.
-- Completed training but left the order. Why?
-- The order was destroyed. One of the last survivors.
-- On a long-term assignment: observe and report on western power structures.
+**Why the Sword Coast?** The order sent her west on her first solo mission — but told her nothing about it. She doesn't know the target, the objective, or the timeline. She was told to go and that she'd understand when the time was right. The DM decides what the mission actually is, and when (or if) Fusetsu learns the truth.
 
 ---
 
@@ -79,44 +75,43 @@ Mechanically, this is a **Human** (the Shou are human — it's an ethnicity, not
 - **One feat at level 1** — this is huge
 
 Good starting feats for this build:
-- **Alert** — +5 to initiative, can't be surprised. Very ninja. Always acts first.
+- **Alert** — +5 to initiative, can't be surprised. Essential for Gloom Stalker — Dread Ambusher only triggers on round 1, so being surprised wastes it. Alert prevents that and stacks with the WIS initiative bonus at level 3.
 - **Observant** — +5 to passive Perception and Investigation, +1 WIS. The "I notice everything" character.
-- **Skulker** — Hide when lightly obscured, missed ranged attacks don't reveal position. Literal ninja stealth.
+- **Sharpshooter** — -5 to hit, +10 damage on ranged attacks. Ignore cover, ignore long range disadvantage. The gambler's pick.
 
 Alternatively, a **Wood Elf** works beautifully (DEX bonus, bonus to stealth in nature, faster movement, and the long-lived elf combined with Shou cultural training makes an interesting story).
 
-### Class: Rogue
+### Class: Ranger
 
 **Subclass options** (chosen at level 3):
 
 | Subclass | Vibe | Key Feature |
 |---|---|---|
-| **Assassin** | The classic ninja | Advantage + auto-crit on surprised enemies. Proficiency with disguise and poisoner's kits. Devastating first round. |
-| **Swashbuckler** | Duelist / skirmisher | Sneak Attack when 1-on-1, free disengage from anyone attacked, CHA-based initiative bonus. More mobile. |
-| **Shadow** (from the Monk class, for reference) | — | For players considering a multiclass into Monk later, Way of Shadow is literally the ninja subclass. |
+| **Gloom Stalker** | Shadow predator | Bonus attack on round 1 with extra 1d8, WIS to initiative, invisible in darkness to darkvision. Devastating ambush opener. |
+| **Hunter** | Professional killer | Colossus Slayer (extra 1d8 per turn on wounded targets) or Horde Breaker (free attack on a second nearby target). Consistent, reliable damage every round. |
+| **Fey Wanderer** | Otherworldly traveler | WIS to CHA checks, fear/charm resistance, bonus psychic damage. More social, less combat-focused. |
 
-**Assassin** fits this concept best. That first-round burst of auto-crit Sneak Attack on a surprised enemy is peak ninja fantasy.
+**Gloom Stalker** fits this concept best. The explosive first round, darkness invisibility, and WIS-to-initiative all reward the "hit first, hit hard" playstyle. She comes out of the shadows, puts arrows in things, and by the time anyone reacts she's already reloading.
 
 ### Stat Priority
 
 | Priority | Stat | Why |
 |---|---|---|
 | 1st | **DEX** | Everything — attacks, AC, stealth, initiative |
-| 2nd | **WIS** | Perception, Insight, Survival. The character's training in awareness and discipline. |
+| 2nd | **WIS** | Perception, Insight, Survival. Spellcasting modifier. Gloom Stalker initiative bonus. The character's training in awareness and discipline. |
 | 3rd | **CON** | Hit points. Not tanky, but not made of paper. |
 | 4th | **INT** | Investigation, Arcana. The analytical mind. |
-| 5th | **CHA** | Not the party face — the quiet professional. |
+| 5th | **CHA** | Not charming — abrasive, blunt, and not interested in talking her way through anything. |
 | 6th | **STR** | Dump stat. Finesse over brute force. |
 
 ### Skills
 
-Rogues get 4 skill proficiencies (most in the game). Good picks for this concept:
-- **Stealth** (DEX) — Non-negotiable for a ninja.
+Rangers get 3 skill proficiencies (fewer than Rogues, but compensated by spellcasting and Extra Attack). Good picks for this concept:
+- **Stealth** (DEX) — Non-negotiable for a shadow operative.
 - **Perception** (WIS) — Sees everything. Feeds into the WIS investment.
-- **Insight** (WIS) — Reads people. Another WIS skill.
-- **Acrobatics** (DEX) — Rooftop movement, flips, balance. The martial artist physicality.
+- **Survival** (WIS) — Tracking, navigation, reading terrain. Core Ranger identity and Silent Cord mountain training.
 
-The background provides 2 more skills. The **Urchin** or **Criminal** background adds Sleight of Hand and Deception. This build uses **Far Traveler** for Survival and Investigation, which fits the story better.
+The background provides 2 more skills. This build uses **Far Traveler** for Insight and Investigation. Variant Human adds a 6th: Acrobatics.
 
 ---
 
@@ -133,15 +128,16 @@ Before finalizing any character like this, run these things by the DM:
 
 ## Character Summary
 
-> **Concept:** A trained operative from an eastern monastic order, now on the Sword Coast. Quiet, observant, precise. Fights with twin blades and kills before the enemy knows they're there.
+> **Concept:** A young girl from an eastern monastic order, sent to the Sword Coast on her first mission — one she knows nothing about. Looks like a doll. Fights like a cornered animal. Hits first, asks questions never.
 >
 > **Race:** Variant Human (Shou ethnicity)
-> **Class:** Rogue -> Assassin subclass at level 3
+> **Gender:** Female
+> **Class:** Ranger → Gloom Stalker subclass at level 3
 > **Stats:** DEX > WIS > CON > INT > CHA > STR
-> **Fighting style:** Dual wielding (shortswords — finesse and light)
-> **Personality:** Patient, disciplined, few words. Watches before acting. Respects skill and dedication in others.
+> **Fighting style:** Longbow primary, twin shortswords when they get close
+> **Personality:** Aggressive, arrogant, impulsive. Speaks with arrows and blades, not words. Trusts the order because it's all she knows, not because she's thought it through.
 
-The WIS focus isn't "optimal" in a min-max sense, but it makes the character *feel* different from every other Rogue at the table — not a street thief, but a trained specialist with preternatural awareness.
+The WIS focus pays off mechanically *and* narratively. DEX+WIS is the Ranger's ideal stat line — WIS powers spellcasting, the Gloom Stalker initiative bonus, Perception, Insight, and Survival. But the character tension remains: she has the instincts and awareness of a master, and the impulse control of a teenager. The wisdom is there; she just hasn't learned to listen to it yet.
 
 ---
 

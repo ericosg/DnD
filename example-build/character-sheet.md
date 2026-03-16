@@ -2,8 +2,6 @@
 
 > **This is an example character sheet** for a fully realized D&D 5e build. It accompanies the [character concept](README.md) and [backstory](backstory.md) documents in this example build. Use it as a reference for how a complete, play-ready character sheet comes together.
 
-> **Note:** This document is formatted for human readability. If you're submitting a character sheet to the DnDnAi bot via `/join`, use the parser-compatible format described in [creating-characters.md](../../bot/docs/creating-characters.md). The key difference: use flat `## Section` + bullet lists, never `###` subheadings inside Skills, Equipment, Features, or Spells sections.
-
 ---
 
 ## Identity
@@ -13,11 +11,12 @@
 | **Name** | Fusetsu (風雪) |
 | **Meaning** | "Wind and snow" — blizzard. In the old texts, it also means *to endure*. |
 | **Race** | Variant Human (Shou ethnicity) |
-| **Class** | Rogue 1 |
-| **Subclass** | Assassin (at level 3) |
+| **Class** | Ranger 1 |
+| **Subclass** | Gloom Stalker (at level 3) |
 | **Background** | Far Traveler |
-| **Alignment** | Lawful Neutral — loyal to the order's code, not good or evil by western standards |
-| **Languages** | Common, one other (Elvish or Dwarvish are practical on the Sword Coast) |
+| **Gender** | Female |
+| **Alignment** | Chaotic Neutral — loyal to the order in theory, but acts on instinct and impulse |
+| **Languages** | Common, Shou, Elvish, + 1 from Favored Enemy |
 | **Level** | 1 |
 | **Experience** | 0 (or milestone) |
 | **Proficiency Bonus** | +2 |
@@ -28,14 +27,14 @@
 
 | Ability | Score | Modifier | Save Prof? | Save Bonus |
 |---|---|---|---|---|
-| **STR** | 8 | -1 | No | -1 |
+| **STR** | 8 | -1 | Yes | +1 |
 | **DEX** | 16 | +3 | Yes | +5 |
 | **CON** | 14 | +2 | No | +2 |
-| **INT** | 10 | 0 | Yes | +2 |
+| **INT** | 10 | 0 | No | +0 |
 | **WIS** | 16 | +3 | No | +3 |
 | **CHA** | 8 | -1 | No | -1 |
 
-Rogue saving throw proficiencies: **DEX** and **INT**.
+Ranger saving throw proficiencies: **STR** and **DEX**.
 
 ---
 
@@ -44,11 +43,10 @@ Rogue saving throw proficiencies: **DEX** and **INT**.
 | Stat | Value | How It's Calculated |
 |---|---|---|
 | **Armor Class** | 14 | Leather armor (11) + DEX mod (+3) |
-| **Initiative** | +8 | DEX mod (+3) + Alert feat (+5) |
+| **Initiative** | +8 | DEX mod (+3) + Alert feat (+5). Becomes **+11** at level 3 (Gloom Stalker adds WIS +3). |
 | **Speed** | 30 ft. | Standard for human |
-| **Hit Point Maximum** | 10 | 8 (Rogue base) + 2 (CON mod) |
-| **Hit Dice** | 1d8 | Rogues use d8 hit dice |
-| **Sneak Attack** | 1d6 | Scales at odd levels |
+| **Hit Point Maximum** | 12 | 10 (Ranger base) + 2 (CON mod) |
+| **Hit Dice** | 1d10 | Rangers use d10 hit dice |
 
 ### Death Saves
 | Successes | --- --- --- |
@@ -61,50 +59,48 @@ Rogue saving throw proficiencies: **DEX** and **INT**.
 
 | Weapon | Attack Bonus | Damage | Range | Properties | Notes |
 |---|---|---|---|---|---|
-| Shortsword (main) | +5 | 1d6+3 piercing | 5 ft. | Finesse, Light | Add Sneak Attack when eligible |
-| Shortsword (off-hand) | +5 | 1d6 piercing | 5 ft. | Finesse, Light | No DEX mod to damage. Bonus action. |
-| Shortbow | +5 | 1d6+3 piercing | 80/320 ft. | Ammunition, Two-handed | 20 arrows |
+| Longbow | +5 | 1d8+3 piercing | 150/600 ft. | Ammunition, Heavy, Two-handed | Primary weapon. +7 to hit at level 2 with Archery style. |
+| Shortsword (main) | +5 | 1d6+3 piercing | 5 ft. | Finesse, Light | Backup melee. |
+| Shortsword (off-hand) | +5 | 1d6 piercing | 5 ft. | Finesse, Light | No DEX mod to damage (no Two-Weapon Fighting style). Bonus action. |
 | Dagger (melee) | +5 | 1d4+3 piercing | 5 ft. | Finesse, Light | |
 | Dagger (thrown) | +5 | 1d4+3 piercing | 20/60 ft. | Finesse, Light, Thrown | Lose the dagger on throw |
 
 **Attack bonus** = DEX mod (+3) + proficiency (+2) = **+5**
 
-### Sneak Attack Reminder
-Once per turn, add 1d6 to one attack when:
-- There is **advantage** on the attack, OR
-- An **ally is within 5 ft.** of the target and there is no disadvantage
-
-Works on melee AND ranged. Works on opportunity attacks (separate turn).
+### Ranged Attack in Melee Reminder
+Making a ranged attack while a hostile creature is within 5 ft. gives **disadvantage**. That's when the shortswords come out.
 
 ---
 
 ## Skills
 
-| Skill | Ability | Prof | Expertise | Modifier |
-|---|---|---|---|---|
-| Stealth | DEX | Yes | Yes | **+7** |
-| Perception | WIS | Yes | Yes | **+7** |
-| Acrobatics | DEX | Yes | | +5 |
-| Insight | WIS | Yes | | +5 |
-| Sleight of Hand | DEX | Yes | | +5 |
-| Survival | WIS | Yes | | +5 |
-| Investigation | INT | Yes | | +2 |
-| Animal Handling | WIS | | | +3 |
-| Medicine | WIS | | | +3 |
-| Arcana | INT | | | +0 |
-| History | INT | | | +0 |
-| Nature | INT | | | +0 |
-| Religion | INT | | | +0 |
-| Athletics | STR | | | -1 |
-| Deception | CHA | | | -1 |
-| Intimidation | CHA | | | -1 |
-| Performance | CHA | | | -1 |
-| Persuasion | CHA | | | -1 |
+| Skill | Ability | Prof | Modifier |
+|---|---|---|---|
+| Stealth | DEX | Yes | +5 |
+| Perception | WIS | Yes | +5 |
+| Survival | WIS | Yes | +5 |
+| Insight | WIS | Yes | +5 |
+| Acrobatics | DEX | Yes | +5 |
+| Investigation | INT | Yes | +2 |
+| Animal Handling | WIS | | +3 |
+| Medicine | WIS | | +3 |
+| Sleight of Hand | DEX | | +3 |
+| Arcana | INT | | +0 |
+| History | INT | | +0 |
+| Nature | INT | | +0 |
+| Religion | INT | | +0 |
+| Athletics | STR | | -1 |
+| Deception | CHA | | -1 |
+| Intimidation | CHA | | -1 |
+| Performance | CHA | | -1 |
+| Persuasion | CHA | | -1 |
+
+Skill sources: Ranger (3): Stealth, Perception, Survival. Far Traveler (2): Insight, Investigation. Variant Human (1): Acrobatics.
 
 ### Passive Scores
 | Passive | Value |
 |---|---|
-| **Passive Perception** | **17** |
+| **Passive Perception** | **15** |
 | **Passive Investigation** | 12 |
 | **Passive Insight** | 15 |
 
@@ -114,31 +110,27 @@ Works on melee AND ranged. Works on opportunity attacks (separate turn).
 
 ### Variant Human (Racial)
 - +1 DEX, +1 WIS (already included in scores)
-- 1 extra skill proficiency (Survival)
+- 1 extra skill proficiency (Acrobatics)
 - 1 feat at level 1 (Alert)
 - Speed: 30 ft.
 - Size: Medium
 - Languages: Common + 1
 
 ### Alert (Feat)
-- +5 to initiative
-- Can't be surprised while conscious
-- Hidden creatures don't gain advantage on attack rolls against Fusetsu
+- **+5 to initiative** — stacks with DEX (+3) for +8 at level 1. At level 3 Gloom Stalker adds WIS (+3) for a total of **+11**. You will almost always go first.
+- **Can't be surprised while conscious** — if the party walks into an ambush, everyone else might lose their first turn. You don't. This protects Dread Ambusher (level 3), which only triggers on round 1 — without Alert, one surprise round could waste your biggest damage turn.
+- **Hidden creatures don't gain advantage on attacks against you** — invisible enemies, creatures lurking in shadows, attackers you can't see — none of them get advantage against Fusetsu. Her instincts fire before her brain does.
 
-### Sneak Attack (Rogue 1)
-- 1d6 extra damage, once per turn
-- Requires advantage OR an ally within 5 ft. of target
-- Must use finesse or ranged weapon
-- Don't need advantage if ally is adjacent (but can't have disadvantage)
+### Favored Enemy: Humanoids (Ranger 1)
+- Two humanoid races chosen (e.g., humans and elves — adjust to fit the campaign)
+- Advantage on WIS (Survival) checks to track them and INT checks to recall information about them
+- Learn one language associated with the favored enemy type
+- *Reflavored as Silent Cord training: she was drilled on identifying and tracking people, not monsters*
 
-### Expertise (Rogue 1)
-- Double proficiency bonus on 2 skills: **Stealth**, **Perception**
-
-### Thieves' Cant (Rogue 1)
-- A secret language of signs, symbols, and coded speech used by criminals and rogues
-- Allows covert communication with others who know Thieves' Cant
-- Reveals hidden messages left by other rogues (e.g., markings indicating safe houses, danger, or territorial claims)
-- Takes 4x longer to convey a message in Thieves' Cant than speaking plainly
+### Natural Explorer (Ranger 1)
+- Choose a favored terrain (Mountain recommended — where she grew up)
+- While in favored terrain: difficult terrain doesn't slow the group, can't become lost except by magic, always alert to danger, move stealthily at normal pace when alone, find twice as much food when foraging, learn exact number/size/recency of tracked creatures
+- *Reflavored as mountain monastery survival training*
 
 ---
 
@@ -146,37 +138,35 @@ Works on melee AND ranged. Works on opportunity attacks (separate turn).
 
 | Level | What You Get |
 |---|---|
-| **1 (start)** | Sneak Attack 1d6, Expertise (2 skills), Thieves' Cant |
-| **2** | **Cunning Action** — Dash, Disengage, or Hide as bonus action |
-| **3** | **Assassin subclass** — Assassinate (advantage + auto-crit on surprised/slower enemies), proficiency with disguise kit and poisoner's kit. Sneak Attack -> 2d6 |
-| **4** | **ASI: +2 DEX** (16->18, mod +3->+4). All attacks, damage, AC, stealth, initiative improve. |
-| **5** | **Uncanny Dodge** — reaction to halve one attack's damage. Sneak Attack -> 3d6 |
-| **6** | **Expertise** in 2 more skills (Insight and Survival recommended) |
-| **7** | **Evasion** — DEX saves for half damage? Take zero instead. Sneak Attack -> 4d6 |
-| **8** | **ASI: +2 DEX** (18->20, mod +4->+5). DEX maxed. |
-| **9** | Assassin feature: **Infiltration Expertise** — create false identities over 7 days. Sneak Attack -> 5d6 |
-| **10** | **ASI: feat time!** Mobile, Fey Touched, Shadow Touched, Observant — all strong picks. |
+| **1 (start)** | Favored Enemy, Natural Explorer |
+| **2** | **Fighting Style (Archery)** — +2 to all ranged attack rolls. Longbow goes from +5 to **+7**. **Spellcasting** — 2 first-level spell slots. Hunter's Mark (1d6 extra per hit), Cure Wounds, etc. |
+| **3** | **Gloom Stalker** — Dread Ambusher (WIS to initiative, +10 speed round 1, extra attack with +1d8 damage), Umbral Sight (darkvision 60 ft., invisible to darkvision in darkness), Disguise Self spell free. |
+| **4** | **ASI: +2 DEX** (16→18, mod +3→+4). All attacks, damage, AC, initiative improve. |
+| **5** | **Extra Attack** — two attacks per Attack action. 2nd-level spells. This is the big power spike. |
+| **6** | Favored Enemy improvement (one more type), Natural Explorer improvement (one more terrain) |
+| **7** | **Iron Mind** — proficiency in WIS saving throws. With +3 WIS and proficiency, that's +5 vs. charm, fear, domination. |
+| **8** | **Feat: Sharpshooter** — take -5 to hit for +10 damage on any ranged attack (your call per shot). Ignore half/three-quarters cover. No disadvantage at long range. The reckless, all-or-nothing archer feat. With +8 to hit by now, the -5 gamble becomes very playable. |
+| **9** | 3rd-level spells |
+| **10** | Natural Explorer improvement, Hide in Plain Sight |
 
 ---
 
 ## Proficiencies
 
 ### Armor
-Light armor
+Light armor, medium armor, shields
 
 ### Weapons
-Simple weapons, hand crossbows, longswords, rapiers, shortswords
+Simple weapons, martial weapons
 
 ### Tools
-- Thieves' tools
 - Gaming set (dice)
-- Disguise kit (at level 3, Assassin)
-- Poisoner's kit (at level 3, Assassin)
 
 ### Languages
 - Common
-- One additional (player's choice)
-- Thieves' Cant
+- Shou
+- Elvish
+- One additional from Favored Enemy (depends on enemy type chosen)
 
 ---
 
@@ -185,31 +175,25 @@ Simple weapons, hand crossbows, longswords, rapiers, shortswords
 ### Weapons
 | Item | Qty | Weight |
 |---|---|---|
-| Shortsword | 2 | 2 lbs each |
-| Shortbow | 1 | 2 lbs |
+| Longbow | 1 | 2 lbs |
 | Arrows | 20 | 1 lb |
+| Shortsword | 2 | 2 lbs each |
 | Dagger | 2 | 1 lb each |
 
 ### Armor
-| Item | AC | Weight |
-|---|---|---|
-| Leather armor (worn) | 11 + DEX | 10 lbs |
+| Item | AC | Weight | Notes |
+|---|---|---|---|
+| Leather armor (worn) | 11 + DEX = 14 | 10 lbs | Upgrade to **studded leather** (45 gp) when affordable → AC 15. No Stealth penalty on either. Avoid medium armor (scale mail, half plate) — Stealth disadvantage ruins Gloom Stalker. |
 
-### Burglar's Pack
+### Explorer's Pack
 | Item | Qty | Weight |
 |---|---|---|
 | Backpack | 1 | 5 lbs |
-| Ball bearings (bag of 1,000) | 1 | 2 lbs |
-| String (10 ft.) | 1 | -- |
-| Bell | 1 | -- |
-| Candle | 5 | -- |
-| Crowbar | 1 | 5 lbs |
-| Hammer | 1 | 3 lbs |
-| Piton | 10 | 1/4 lb each |
-| Hooded lantern | 1 | 2 lbs |
-| Oil flask | 2 | 1 lb each |
-| Rations (1 day) | 5 | 2 lbs each |
+| Bedroll | 1 | 7 lbs |
+| Mess kit | 1 | 1 lb |
 | Tinderbox | 1 | 1 lb |
+| Torch | 10 | 1 lb each |
+| Rations (1 day) | 10 | 2 lbs each |
 | Waterskin | 1 | 5 lbs (full) |
 | Hempen rope (50 ft.) | 1 | 10 lbs |
 
@@ -221,11 +205,6 @@ Simple weapons, hand crossbows, longswords, rapiers, shortswords
 | Maps from Kara-Tur | -- | Homeland maps |
 | Jade pendant | 1 | Worth 10 gp |
 
-### Other
-| Item | Qty |
-|---|---|
-| Thieves' tools | 1 |
-
 ### Gold
 5 gp
 
@@ -235,17 +214,17 @@ Simple weapons, hand crossbows, longswords, rapiers, shortswords
 
 | Trait | |
 |---|---|
-| **Personality Trait** | Watches and listens far more than speaking. When speaking, every word is measured and precise. |
-| **Personality Trait** | Always knows the exits. Sits with back to the wall. Aware of every person in the room. |
-| **Ideal** | Precision — a single correct action prevents a thousand mistakes. Waste is failure. |
-| **Bond** | The Silent Cord is everything. The mission is bigger than any one life. |
-| **Flaw** | Does not question the order. Never has. This certainty may one day be tested. |
+| **Personality Trait** | Hits first. Thinks maybe later. Words are a waste of time when a blade makes the point faster. |
+| **Personality Trait** | Carries herself with the confidence of someone who has never once considered that she might be wrong about anything. |
+| **Ideal** | Action — hesitation is weakness. The person still thinking is the person already bleeding. |
+| **Bond** | The Silent Cord raised her and sent her west. She doesn't know why yet. She trusts they'll tell her when it matters. |
+| **Flaw** | Arrogant and reckless. Mistakes aggression for competence. Will start fights she can't finish and refuse to admit it. |
 
 ---
 
 ## Backstory Summary (What the Party Sees)
 
-A quiet, disciplined foreigner from the far east. Clearly trained — moves like a predator, notices everything, says little. Carries two shortswords with obvious familiarity. Doesn't talk about the past. Polite but distant. Watches before acting, always.
+A young Shou girl with long braided white hair and a disarmingly cute appearance — she could pass for a performer or an idol. Then she opens her mouth, or more likely, draws a blade. Aggressive, brash, and utterly convinced she's the most dangerous person in any room. Trained — obviously — but reckless about it. Picks fights, finishes most of them, and never apologizes for the ones she doesn't. Doesn't talk about where she came from or why she's here. Might not fully know herself.
 
 *For the full backstory and DM notes, see [backstory.md](backstory.md).*
 
@@ -253,23 +232,26 @@ A quiet, disciplined foreigner from the far east. Clearly trained — moves like
 
 ## Combat Turn — Quick Reference
 
-### Standard Turn
+### Ranged Turn (Default)
 1. **Move** up to 30 ft. (split before/after action)
-2. **Action:** Attack (main-hand shortsword) -> d20+5, damage 1d6+3 + Sneak Attack 1d6
-3. **Bonus Action:** Attack (off-hand shortsword) -> d20+5, damage 1d6
-4. **Reaction (if triggered):** Opportunity attack -> d20+5, damage 1d6+3 + Sneak Attack 1d6
+2. **Action:** Longbow attack → d20+5 to hit, 1d8+3 damage
+3. **Bonus Action:** Nothing at level 1. At level 2+: cast Hunter's Mark (1d6 extra damage per hit) or move it to a new target.
+4. **Reaction (if triggered):** Opportunity attack with shortsword → d20+5, 1d6+3
 
-### Stealth Turn (Level 2+)
-1. **Move** to cover
-2. **Action:** Attack (main-hand) -> Sneak Attack if advantage/ally adjacent
-3. **Bonus Action:** Cunning Action — **Hide** (Stealth +7 vs. passive Perception)
+### Melee Turn (When They Get Close)
+1. Stow longbow or drop it (free interaction)
+2. **Action:** Shortsword attack → d20+5, 1d6+3
+3. **Bonus Action:** Off-hand shortsword → d20+5, 1d6 (no DEX mod to damage without Two-Weapon Fighting style)
+4. Next turn: pick the bow back up or keep swinging
 
-### Escape Turn (Level 2+)
-1. **Bonus Action:** Cunning Action — **Disengage**
-2. **Move** 30 ft. away safely (no opportunity attacks)
-3. **Action:** Dash (another 30 ft.) or Attack then move
+### Dread Ambusher Turn (Level 3+, Round 1 Only)
+1. **Speed** is 30 + 10 = 40 ft. this round
+2. **Action:** Longbow attack → d20+7 (with Archery), 1d8+4 + Hunter's Mark 1d6
+3. **Extra attack (Dread Ambusher):** Longbow → d20+7, 1d8+4 + 1d8 + Hunter's Mark 1d6
+4. At level 5 with Extra Attack: **three longbow shots** on round 1
 
-### Ranged Turn
-1. Stow shortswords (free interaction)
-2. **Action:** Shortbow attack -> d20+5, damage 1d6+3 + Sneak Attack 1d6
-3. Shortbow is two-handed, so no off-hand attack this turn
+### Gloom Stalker in Darkness (Level 3+)
+- If you're in darkness and the enemy relies on darkvision to see: **you are invisible**
+- All your attacks have **advantage** (unseen attacker)
+- They can't target you with attacks that require sight
+- You don't need to hide — you're just invisible. Stand in the open.

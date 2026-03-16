@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A free, practical guide for learning D&D 5th Edition from scratch. Built for players coming from video games (Baldur's Gate 3) and board games (HeroQuest), but useful for any first-timer.
 
-This is a companion repository to [DnDnAi](https://github.com/ericosg/DnDnAi), an AI-powered D&D Discord bot. The guides here informed the bot's rules engine, character sheet format, and DM system prompt. The character sheet markdown format used in `example-build/character-sheet.md` is the format the bot's parser expects from players.
+This is a standalone learning resource for tabletop D&D. It is not connected to any bot or digital tooling.
 
 ## Repository Structure
 
 ```
 guides/           Numbered tutorial sequence (read in order)
 reference/        Detailed lookup docs for character creation
-example-build/    Complete worked character (Fūsetsu, ninja rogue)
+example-build/    Complete worked character (Fūsetsu, Gloom Stalker Ranger)
 prompt.md         AI-assisted character creation template
 ```
 
@@ -35,7 +35,8 @@ prompt.md         AI-assisted character creation template
 
 ### Example Build (`example-build/`)
 - `README.md` — character concept (Kara-Tur lore, Silent Cord order, mechanical mapping)
-- `character-sheet.md` — complete level 1 sheet (Variant Human Rogue/Assassin)
+- `character-sheet.md` — complete level 1 sheet (Variant Human Ranger/Gloom Stalker)
+- `character-sheet.html` — printable A4 character sheet + cheat sheet (open in browser, Cmd+P to print)
 - `backstory.md` — in-character narrative + DM notes with plot hooks
 
 ### Prompt Template (`prompt.md`)
@@ -56,6 +57,3 @@ When editing or creating new content:
 - Include example build references where relevant
 - Keep the cheat sheet (`07`) updated with any new mechanics
 
-## Connection to DnDnAi
-
-The character sheet in `example-build/character-sheet.md` is formatted for human readability (tables, `###` subheadings, detailed breakdowns). It is **not** the format the bot's parser expects — it's a teaching document. The bot-compatible format uses flat `## Section` + bullet lists and `**Key:** Value` pairs with no `###` subheadings inside parsed sections. See `bot/docs/creating-characters.md` for the canonical parser-compatible format.
