@@ -58,4 +58,4 @@ When editing or creating new content:
 
 ## Connection to DnDnAi
 
-The character sheet format in `example-build/character-sheet.md` uses `**Key:** Value` pairs and `## Section` headings with bullet lists. This exact format is what the DnDnAi bot's character sheet parser (`game/characters.ts`) expects. If you change the format here, the parser may need updating there.
+The character sheet in `example-build/character-sheet.md` is formatted for human readability (tables, `###` subheadings, detailed breakdowns). It is **not** the format the bot's parser expects — it's a teaching document. The bot-compatible format uses flat `## Section` + bullet lists and `**Key:** Value` pairs with no `###` subheadings inside parsed sections. See `bot/docs/creating-characters.md` for the canonical parser-compatible format.

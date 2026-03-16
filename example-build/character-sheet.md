@@ -2,6 +2,8 @@
 
 > **This is an example character sheet** for a fully realized D&D 5e build. It accompanies the [character concept](README.md) and [backstory](backstory.md) documents in this example build. Use it as a reference for how a complete, play-ready character sheet comes together.
 
+> **Note:** This document is formatted for human readability. If you're submitting a character sheet to the DnDnAi bot via `/join`, use the parser-compatible format described in [creating-characters.md](../../bot/docs/creating-characters.md). The key difference: use flat `## Section` + bullet lists, never `###` subheadings inside Skills, Equipment, Features, or Spells sections.
+
 ---
 
 ## Identity
