@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Sheet — Fusetsu (風雪)</title>
+<style>
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9.5pt;
+    color: #1a1a1a;
+    background: #f5f0e8;
+    line-height: 1.3;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: #faf6ee;
+    padding: 10mm;
+    page-break-after: always;
+    position: relative;
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+  }
+
+  @media print {
+    body {
+      background: white;
+    }
+    .page {
+      background: white;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: auto;
+    }
+  }
+
+  /* ── Header ── */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    background: #f0ead8;
+  }
+
+  .header .char-name {
+    grid-column: 1 / -1;
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+
+  .header .char-name .kanji {
+    font-weight: 400;
+    font-size: 14pt;
+    color: #555;
+    margin-left: 6px;
+  }
+
+  .header-field {
+    font-size: 8.5pt;
+  }
+
+  .header-field .label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #777;
+    display: block;
+  }
+
+  .header-field .value {
+    font-weight: 600;
+  }
+
+  /* ── Main Layout ── */
+  .main {
+    display: grid;
+    grid-template-columns: 82mm 1fr;
+    gap: 8px;
+  }
+
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* ── Section Box ── */
+  .section {
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    padding: 6px 8px;
+    background: #fdfbf5;
+  }
+
+  .section-title {
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+
+  /* ── Ability Scores ── */
+  .ability-scores {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ability-box {
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    align-items: center;
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    padding: 4px 6px;
+    background: #fdfbf5;
+  }
+
+  .ability-box .ability-name {
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+  }
+
+  .ability-box .ability-mod {
+    font-size: 16pt;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .ability-box .ability-score {
+    font-size: 10pt;
+    text-align: center;
+    background: #f0ead8;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+    border: 1px solid #999;
+  }
+
+  /* ── Saving Throws ── */
+  .save-row, .skill-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1.5px 0;
+    font-size: 8.5pt;
+  }
+
+  .prof-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1.5px solid #555;
+    flex-shrink: 0;
+  }
+
+  .prof-dot.filled {
+    background: #333;
+  }
+
+  .save-mod, .skill-mod {
+    font-weight: 600;
+    min-width: 22px;
+    text-align: right;
+  }
+
+  .skill-name {
+    flex: 1;
+  }
+
+  .skill-ability {
+    font-size: 7pt;
+    color: #888;
+    text-transform: uppercase;
+  }
+
+  /* ── Combat Stats ── */
+  .combat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  .combat-stat {
+    text-align: center;
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    padding: 6px 4px;
+    background: #fdfbf5;
+  }
+
+  .combat-stat .stat-value {
+    font-size: 18pt;
+    font-weight: 700;
+  }
+
+  .combat-stat .stat-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+  }
+
+  .combat-stat .stat-note {
+    font-size: 6.5pt;
+    color: #888;
+  }
+
+  .combat-stat.wide {
+    grid-column: span 3;
+  }
+
+  /* ── HP Section ── */
+  .hp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .hp-box {
+    text-align: center;
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    padding: 6px;
+    background: #fdfbf5;
+  }
+
+  .hp-box .hp-value {
+    font-size: 22pt;
+    font-weight: 700;
+  }
+
+  .hp-box .hp-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+  }
+
+  .hp-box .hp-note {
+    font-size: 7pt;
+    color: #888;
+  }
+
+  .hp-current {
+    border: 1.5px dashed #999;
+    border-radius: 5px;
+    padding: 10px 6px;
+    text-align: center;
+    min-height: 50px;
+  }
+
+  .hp-current .hp-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+  }
+
+  /* ── Death Saves ── */
+  .death-saves {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+  }
+
+  .death-save-group {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 8pt;
+  }
+
+  .death-save-group .ds-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    color: #555;
+    margin-right: 2px;
+  }
+
+  .death-save-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid #555;
+  }
+
+  /* ── Attacks Table ── */
+  .attacks-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+
+  .attacks-table th {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+    text-align: left;
+    padding: 2px 4px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .attacks-table td {
+    padding: 3px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .attacks-table .atk-note {
+    font-size: 7pt;
+    color: #888;
+  }
+
+  /* ── Features ── */
+  .feature-item {
+    margin-bottom: 5px;
+  }
+
+  .feature-item .feat-name {
+    font-weight: 700;
+    font-size: 8.5pt;
+  }
+
+  .feature-item .feat-desc {
+    font-size: 8pt;
+    color: #444;
+  }
+
+  /* ── Equipment List ── */
+  .equip-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 12px;
+    font-size: 8pt;
+  }
+
+  .equip-item {
+    padding: 1px 0;
+    border-bottom: 1px dotted #ddd;
+  }
+
+  /* ── Personality Box ── */
+  .personality-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .personality-field {
+    padding: 3px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .personality-field .pf-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #777;
+    font-weight: 600;
+  }
+
+  .personality-field .pf-value {
+    font-size: 8pt;
+  }
+
+  /* ── Passive Scores ── */
+  .passive-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 0;
+  }
+
+  .passive-value {
+    font-weight: 700;
+    font-size: 11pt;
+    background: #f0ead8;
+    border: 1px solid #999;
+    border-radius: 3px;
+    width: 28px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .passive-label {
+    font-size: 8pt;
+  }
+
+  /* ── Languages & Proficiencies ── */
+  .prof-list {
+    font-size: 8pt;
+    line-height: 1.5;
+  }
+
+  .prof-list .prof-category {
+    font-weight: 700;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    color: #555;
+    margin-top: 3px;
+  }
+
+  /* ── Cheat Sheet (Page 2) ── */
+  .cheat-header {
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  .cheat-header .subtitle {
+    font-size: 10pt;
+    font-weight: 400;
+    color: #555;
+  }
+
+  .cheat-section {
+    margin-bottom: 10px;
+  }
+
+  .cheat-section-title {
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    background: #f0ead8;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    border-left: 3px solid #333;
+  }
+
+  .cheat-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+
+  .cheat-table th {
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+    text-align: left;
+    padding: 3px 6px;
+    border-bottom: 1.5px solid #999;
+    background: #f9f5eb;
+  }
+
+  .cheat-table td {
+    padding: 3px 6px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+
+  .cheat-table tr.current {
+    background: #f0ead8;
+    font-weight: 600;
+  }
+
+  .cheat-table tr.future td {
+    color: #888;
+  }
+
+  .turn-block {
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background: #fdfbf5;
+  }
+
+  .turn-block .turn-title {
+    font-weight: 700;
+    font-size: 9pt;
+    margin-bottom: 3px;
+  }
+
+  .turn-block .turn-default {
+    font-size: 7pt;
+    text-transform: uppercase;
+    color: #888;
+    margin-left: 4px;
+    font-weight: 400;
+  }
+
+  .turn-block ol, .turn-block ul {
+    margin-left: 16px;
+    font-size: 8.5pt;
+  }
+
+  .turn-block li {
+    padding: 1px 0;
+  }
+
+  .turn-block .turn-note {
+    font-size: 7.5pt;
+    color: #888;
+    font-style: italic;
+    margin-top: 3px;
+  }
+
+  .cheat-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .key-rule {
+    padding: 3px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 8.5pt;
+  }
+
+  .key-rule .rule-name {
+    font-weight: 700;
+  }
+
+  .key-rule .rule-desc {
+    color: #444;
+  }
+
+  .alert-box {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 6px 10px;
+    background: #f0ead8;
+    font-size: 8.5pt;
+    margin-bottom: 8px;
+  }
+
+  .alert-box .alert-title {
+    font-weight: 700;
+    font-size: 9pt;
+    margin-bottom: 2px;
+  }
+
+  .feat-highlight {
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    padding: 6px 10px;
+    background: #fdfbf5;
+    margin-bottom: 6px;
+  }
+
+  .feat-highlight .fh-name {
+    font-weight: 700;
+    font-size: 9pt;
+  }
+
+  .feat-highlight .fh-detail {
+    font-size: 8pt;
+    color: #444;
+    margin-top: 2px;
+  }
+
+  .backstory-box {
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    padding: 8px 10px;
+    background: #fdfbf5;
+    font-size: 8.5pt;
+    font-style: italic;
+    color: #444;
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════ PAGE 1: CHARACTER SHEET ════════════════════ -->
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="char-name">Fusetsu <span class="kanji">風雪</span></div>
+    <div class="header-field"><span class="label">Class & Level</span><span class="value">Ranger 1</span></div>
+    <div class="header-field"><span class="label">Background</span><span class="value">Far Traveler</span></div>
+    <div class="header-field"><span class="label">Race</span><span class="value">Variant Human (Shou)</span></div>
+    <div class="header-field"><span class="label">Alignment</span><span class="value">Chaotic Neutral</span></div>
+    <div class="header-field"><span class="label">Gender</span><span class="value">Female</span></div>
+    <div class="header-field"><span class="label">Subclass (Lvl 3)</span><span class="value">Gloom Stalker</span></div>
+  </div>
+
+  <div class="main">
+    <!-- ── Left Column ── -->
+    <div class="left-col">
+
+      <!-- Ability Scores -->
+      <div class="ability-scores">
+        <div class="ability-box">
+          <div class="ability-name">STR</div>
+          <div class="ability-mod">-1</div>
+          <div class="ability-score">8</div>
+        </div>
+        <div class="ability-box">
+          <div class="ability-name">DEX</div>
+          <div class="ability-mod">+3</div>
+          <div class="ability-score">16</div>
+        </div>
+        <div class="ability-box">
+          <div class="ability-name">CON</div>
+          <div class="ability-mod">+2</div>
+          <div class="ability-score">14</div>
+        </div>
+        <div class="ability-box">
+          <div class="ability-name">INT</div>
+          <div class="ability-mod">+0</div>
+          <div class="ability-score">10</div>
+        </div>
+        <div class="ability-box">
+          <div class="ability-name">WIS</div>
+          <div class="ability-mod">+3</div>
+          <div class="ability-score">16</div>
+        </div>
+        <div class="ability-box">
+          <div class="ability-name">CHA</div>
+          <div class="ability-mod">-1</div>
+          <div class="ability-score">8</div>
+        </div>
+      </div>
+
+      <!-- Saving Throws -->
+      <div class="section">
+        <div class="section-title">Saving Throws</div>
+        <div class="save-row"><div class="prof-dot filled"></div><div class="save-mod">+1</div> STR</div>
+        <div class="save-row"><div class="prof-dot filled"></div><div class="save-mod">+5</div> DEX</div>
+        <div class="save-row"><div class="prof-dot"></div><div class="save-mod">+2</div> CON</div>
+        <div class="save-row"><div class="prof-dot"></div><div class="save-mod">+0</div> INT</div>
+        <div class="save-row"><div class="prof-dot"></div><div class="save-mod">+3</div> WIS</div>
+        <div class="save-row"><div class="prof-dot"></div><div class="save-mod">-1</div> CHA</div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <div class="section-title">Skills</div>
+        <div class="skill-row"><div class="prof-dot filled"></div><div class="skill-mod">+5</div><div class="skill-name">Acrobatics</div><div class="skill-ability">DEX</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">+3</div><div class="skill-name">Animal Handling</div><div class="skill-ability">WIS</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">+0</div><div class="skill-name">Arcana</div><div class="skill-ability">INT</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">-1</div><div class="skill-name">Athletics</div><div class="skill-ability">STR</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">-1</div><div class="skill-name">Deception</div><div class="skill-ability">CHA</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">+0</div><div class="skill-name">History</div><div class="skill-ability">INT</div></div>
+        <div class="skill-row"><div class="prof-dot filled"></div><div class="skill-mod">+5</div><div class="skill-name">Insight</div><div class="skill-ability">WIS</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">-1</div><div class="skill-name">Intimidation</div><div class="skill-ability">CHA</div></div>
+        <div class="skill-row"><div class="prof-dot filled"></div><div class="skill-mod">+2</div><div class="skill-name">Investigation</div><div class="skill-ability">INT</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">+3</div><div class="skill-name">Medicine</div><div class="skill-ability">WIS</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">+0</div><div class="skill-name">Nature</div><div class="skill-ability">INT</div></div>
+        <div class="skill-row"><div class="prof-dot filled"></div><div class="skill-mod">+5</div><div class="skill-name">Perception</div><div class="skill-ability">WIS</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">-1</div><div class="skill-name">Performance</div><div class="skill-ability">CHA</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">-1</div><div class="skill-name">Persuasion</div><div class="skill-ability">CHA</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">+0</div><div class="skill-name">Religion</div><div class="skill-ability">INT</div></div>
+        <div class="skill-row"><div class="prof-dot"></div><div class="skill-mod">+3</div><div class="skill-name">Sleight of Hand</div><div class="skill-ability">DEX</div></div>
+        <div class="skill-row"><div class="prof-dot filled"></div><div class="skill-mod">+5</div><div class="skill-name">Stealth</div><div class="skill-ability">DEX</div></div>
+        <div class="skill-row"><div class="prof-dot filled"></div><div class="skill-mod">+5</div><div class="skill-name">Survival</div><div class="skill-ability">WIS</div></div>
+      </div>
+
+      <!-- Passive Scores -->
+      <div class="section">
+        <div class="section-title">Passive Senses</div>
+        <div class="passive-row"><div class="passive-value">15</div><div class="passive-label">Passive Perception</div></div>
+        <div class="passive-row"><div class="passive-value">12</div><div class="passive-label">Passive Investigation</div></div>
+        <div class="passive-row"><div class="passive-value">15</div><div class="passive-label">Passive Insight</div></div>
+      </div>
+
+      <!-- Proficiencies & Languages -->
+      <div class="section">
+        <div class="section-title">Proficiencies & Languages</div>
+        <div class="prof-list">
+          <div class="prof-category">Armor</div>
+          Light, Medium, Shields
+          <div class="prof-category">Weapons</div>
+          Simple, Martial
+          <div class="prof-category">Tools</div>
+          Gaming set (dice)
+          <div class="prof-category">Languages</div>
+          Common, Shou, Elvish, +1 (Favored Enemy)
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Right Column ── -->
+    <div class="right-col">
+
+      <!-- Combat Stats Row -->
+      <div class="combat-grid">
+        <div class="combat-stat">
+          <div class="stat-value">14</div>
+          <div class="stat-label">Armor Class</div>
+          <div class="stat-note">Leather + DEX</div>
+        </div>
+        <div class="combat-stat">
+          <div class="stat-value">+8</div>
+          <div class="stat-label">Initiative</div>
+          <div class="stat-note">+11 at Lvl 3</div>
+        </div>
+        <div class="combat-stat">
+          <div class="stat-value">30</div>
+          <div class="stat-label">Speed</div>
+          <div class="stat-note">ft.</div>
+        </div>
+      </div>
+
+      <!-- HP -->
+      <div class="hp-grid">
+        <div class="hp-box">
+          <div class="hp-value">12</div>
+          <div class="hp-label">Hit Point Maximum</div>
+          <div class="hp-note">d10 + CON (+2)</div>
+        </div>
+        <div class="hp-current">
+          <div class="hp-label">Current Hit Points</div>
+        </div>
+      </div>
+
+      <!-- Hit Dice & Death Saves -->
+      <div class="section">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div><strong>Hit Dice:</strong> 1d10</div>
+          <div class="death-saves">
+            <div class="death-save-group">
+              <span class="ds-label">Success</span>
+              <div class="death-save-dot"></div>
+              <div class="death-save-dot"></div>
+              <div class="death-save-dot"></div>
+            </div>
+            <div class="death-save-group">
+              <span class="ds-label">Fail</span>
+              <div class="death-save-dot"></div>
+              <div class="death-save-dot"></div>
+              <div class="death-save-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Attacks -->
+      <div class="section">
+        <div class="section-title">Attacks</div>
+        <table class="attacks-table">
+          <tr><th>Weapon</th><th>Atk</th><th>Damage</th><th>Range</th><th>Notes</th></tr>
+          <tr>
+            <td><strong>Longbow</strong></td>
+            <td>+5</td>
+            <td>1d8+3 pierce</td>
+            <td>150/600</td>
+            <td class="atk-note">Two-handed. +7 at Lvl 2 (Archery)</td>
+          </tr>
+          <tr>
+            <td><strong>Shortsword</strong></td>
+            <td>+5</td>
+            <td>1d6+3 pierce</td>
+            <td>5 ft.</td>
+            <td class="atk-note">Finesse, Light. Backup melee.</td>
+          </tr>
+          <tr>
+            <td><strong>Shortsword (off)</strong></td>
+            <td>+5</td>
+            <td>1d6 pierce</td>
+            <td>5 ft.</td>
+            <td class="atk-note">Bonus action. No DEX to dmg.</td>
+          </tr>
+          <tr>
+            <td><strong>Dagger</strong></td>
+            <td>+5</td>
+            <td>1d4+3 pierce</td>
+            <td>5 / 20/60</td>
+            <td class="atk-note">Finesse, Light, Thrown</td>
+          </tr>
+        </table>
+        <div style="font-size:7.5pt; color:#888; margin-top:4px;">
+          Attack bonus = DEX (+3) + Proficiency (+2). Ranged attacks have disadvantage if hostile within 5 ft.
+        </div>
+      </div>
+
+      <!-- Features & Traits -->
+      <div class="section">
+        <div class="section-title">Features & Traits</div>
+
+        <div class="feature-item">
+          <div class="feat-name">Alert (Feat)</div>
+          <div class="feat-desc">+5 initiative. Can't be surprised. Hidden creatures don't get advantage on attacks against you.</div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feat-name">Favored Enemy: Humanoids</div>
+          <div class="feat-desc">Advantage on Survival to track, INT checks to recall info. +1 language.</div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feat-name">Natural Explorer: Mountain</div>
+          <div class="feat-desc">In favored terrain: no difficult terrain penalty, can't get lost, stealth at normal pace, double forage, detailed tracking.</div>
+        </div>
+      </div>
+
+      <!-- Personality -->
+      <div class="section">
+        <div class="section-title">Personality</div>
+        <div class="personality-grid">
+          <div class="personality-field">
+            <div class="pf-label">Traits</div>
+            <div class="pf-value">Hits first, thinks maybe later. Words are a waste of time when a blade makes the point faster. Carries herself with absolute, unearned confidence.</div>
+          </div>
+          <div class="personality-field">
+            <div class="pf-label">Ideal</div>
+            <div class="pf-value">Action — hesitation is weakness. The person still thinking is the person already bleeding.</div>
+          </div>
+          <div class="personality-field">
+            <div class="pf-label">Bond</div>
+            <div class="pf-value">The Silent Cord raised her and sent her west. She doesn't know why yet.</div>
+          </div>
+          <div class="personality-field">
+            <div class="pf-label">Flaw</div>
+            <div class="pf-value">Arrogant and reckless. Mistakes aggression for competence. Will start fights she can't finish.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Equipment -->
+      <div class="section">
+        <div class="section-title">Equipment</div>
+        <div class="equip-columns">
+          <div class="equip-item">Longbow</div>
+          <div class="equip-item">Arrows (20)</div>
+          <div class="equip-item">Shortsword x2</div>
+          <div class="equip-item">Dagger x2</div>
+          <div class="equip-item">Leather armor (worn, AC 14)</div>
+          <div class="equip-item">Explorer's pack</div>
+          <div class="equip-item">Gaming set (dice)</div>
+          <div class="equip-item">Maps from Kara-Tur</div>
+          <div class="equip-item">Jade pendant (10 gp)</div>
+          <div class="equip-item">Traveler's clothes</div>
+          <div class="equip-item">5 gp</div>
+          <div class="equip-item">&nbsp;</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Backstory (bottom) -->
+  <div class="backstory-box" style="margin-top:8px;">
+    A young Shou girl with long braided white hair and a disarmingly cute appearance — like an idol who wandered off stage and into a warzone. Aggressive, brash, and utterly convinced she's the most dangerous person in any room. Trained by the Silent Cord (話さぬ糸), a secretive monastic order in Kara-Tur. Sent west on her first mission — one she knows nothing about.
+  </div>
+
+</div>
+
+<!-- ════════════════════ PAGE 2: CHEAT SHEET ════════════════════ -->
+<div class="page">
+
+  <div class="cheat-header">
+    Fusetsu — Combat & Reference Cheat Sheet
+    <div class="subtitle">Gloom Stalker Ranger — Print back-to-back with character sheet</div>
+  </div>
+
+  <!-- Alert Reminder -->
+  <div class="alert-box">
+    <div class="alert-title">Alert Feat — Always Active</div>
+    <strong>+5 initiative</strong> (stacks with DEX +3, and WIS +3 at level 3 = <strong>+11</strong>).
+    <strong>Can't be surprised</strong> — you always act on round 1, protecting Dread Ambusher.
+    <strong>Hidden attackers don't get advantage</strong> against you.
+  </div>
+
+  <!-- Combat Turns -->
+  <div class="cheat-section">
+    <div class="cheat-section-title">Combat Turns</div>
+
+    <div class="turn-block">
+      <div class="turn-title">Ranged Turn <span class="turn-default">— default</span></div>
+      <ol>
+        <li><strong>Move</strong> up to 30 ft. (split before/after action)</li>
+        <li><strong>Action:</strong> Longbow → d20+5, 1d8+3 piercing</li>
+        <li><strong>Bonus Action:</strong> Nothing at Lvl 1. At Lvl 2+: cast/move Hunter's Mark (+1d6 per hit)</li>
+        <li><strong>Reaction:</strong> Opportunity attack with shortsword → d20+5, 1d6+3</li>
+      </ol>
+    </div>
+
+    <div class="turn-block">
+      <div class="turn-title">Melee Turn — When They Get Close</div>
+      <ol>
+        <li>Drop or stow longbow (free interaction)</li>
+        <li><strong>Action:</strong> Shortsword → d20+5, 1d6+3</li>
+        <li><strong>Bonus Action:</strong> Off-hand shortsword → d20+5, 1d6 (no DEX mod to damage)</li>
+      </ol>
+      <div class="turn-note">Ranged attacks within 5 ft. of a hostile have disadvantage — that's when you switch to swords.</div>
+    </div>
+
+    <div class="turn-block" style="border-color:#333; border-width:2px;">
+      <div class="turn-title">Dread Ambusher Turn — Round 1 Only (Level 3+)</div>
+      <ol>
+        <li><strong>Speed</strong> is 30 + 10 = 40 ft. this round</li>
+        <li><strong>Action:</strong> Longbow → d20+7 (Archery), 1d8+4 + Hunter's Mark 1d6</li>
+        <li><strong>Extra Attack (Dread Ambusher):</strong> Longbow → d20+7, 1d8+4 + <strong>1d8</strong> + Hunter's Mark 1d6</li>
+        <li>At Level 5 with Extra Attack: <strong>three longbow shots</strong> on round 1</li>
+      </ol>
+    </div>
+
+    <div class="turn-block">
+      <div class="turn-title">Gloom Stalker in Darkness (Level 3+)</div>
+      <ul>
+        <li>In darkness, if enemies use darkvision to see: <strong>you are invisible to them</strong></li>
+        <li>All your attacks have <strong>advantage</strong> (unseen attacker)</li>
+        <li>They can't target you with attacks requiring sight</li>
+        <li>You don't need to Hide — you're just invisible. Stand in the open.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Level Progression -->
+  <div class="cheat-section">
+    <div class="cheat-section-title">Level Progression</div>
+    <table class="cheat-table">
+      <tr><th>Level</th><th>What You Get</th></tr>
+      <tr class="current"><td><strong>1</strong></td><td>Favored Enemy (Humanoids), Natural Explorer (Mountain), Alert feat</td></tr>
+      <tr class="future"><td><strong>2</strong></td><td><strong>Archery Fighting Style</strong> (+2 ranged attacks → longbow +7). <strong>Spellcasting</strong> — 2 slots. Hunter's Mark (bonus 1d6/hit), Cure Wounds.</td></tr>
+      <tr class="future"><td><strong>3</strong></td><td><strong>Gloom Stalker:</strong> Dread Ambusher (WIS to init, +10 speed R1, extra attack +1d8), Umbral Sight (darkvision 60ft, invisible in darkness), Disguise Self free.</td></tr>
+      <tr class="future"><td><strong>4</strong></td><td><strong>+2 DEX</strong> (16→18). Attacks +1, damage +1, AC 15, initiative +12.</td></tr>
+      <tr class="future"><td><strong>5</strong></td><td><strong>Extra Attack</strong> — 2 attacks per action (3 on round 1 with Dread Ambusher). 2nd-level spells.</td></tr>
+      <tr class="future"><td><strong>6</strong></td><td>+1 Favored Enemy type, +1 favored terrain.</td></tr>
+      <tr class="future"><td><strong>7</strong></td><td><strong>Iron Mind</strong> — WIS save proficiency (+5). Resists charm, fear, domination.</td></tr>
+      <tr class="future"><td><strong>8</strong></td><td><strong>Sharpshooter feat</strong> — -5 to hit / +10 damage (per shot, your choice). Ignore cover. No long range disadvantage.</td></tr>
+      <tr class="future"><td><strong>9</strong></td><td>3rd-level spells.</td></tr>
+      <tr class="future"><td><strong>10</strong></td><td>+1 favored terrain. Hide in Plain Sight.</td></tr>
+    </table>
+  </div>
+
+  <!-- Key Feats Detail -->
+  <div class="cheat-section">
+    <div class="cheat-section-title">Feat Details</div>
+    <div class="cheat-two-col">
+      <div class="feat-highlight">
+        <div class="fh-name">Alert (Level 1)</div>
+        <div class="fh-detail">+5 initiative. Can't be surprised. Hidden creatures don't get advantage on you. Protects Dread Ambusher from ever being wasted.</div>
+      </div>
+      <div class="feat-highlight">
+        <div class="fh-name">Sharpshooter (Level 8)</div>
+        <div class="fh-detail">Choose per attack: -5 to hit, +10 damage. Ignore half/¾ cover. No disadvantage at long range (600 ft longbow, no penalty). The reckless all-or-nothing shot.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Rules -->
+  <div class="cheat-section">
+    <div class="cheat-section-title">Key Rules to Remember</div>
+    <div class="key-rule"><span class="rule-name">Ranged in melee:</span> <span class="rule-desc">Disadvantage on ranged attacks when hostile creature within 5 ft. Switch to shortswords.</span></div>
+    <div class="key-rule"><span class="rule-name">Weapon swap:</span> <span class="rule-desc">One free object interaction per turn. Stow bow + draw one sword = free. Drawing second sword costs next turn's interaction. Ask DM.</span></div>
+    <div class="key-rule"><span class="rule-name">Two-weapon fighting:</span> <span class="rule-desc">Off-hand attack is a bonus action. No ability mod to off-hand damage (you don't have the fighting style for it).</span></div>
+    <div class="key-rule"><span class="rule-name">Hunter's Mark:</span> <span class="rule-desc">Bonus action to cast. Bonus action to move to new target. Lasts 1 hour (concentration). Competes with off-hand attack for bonus action.</span></div>
+    <div class="key-rule"><span class="rule-name">Concentration:</span> <span class="rule-desc">Only one concentration spell at a time. Taking damage → CON save (DC 10 or half damage, whichever higher) or lose the spell.</span></div>
+    <div class="key-rule"><span class="rule-name">Opportunity attack:</span> <span class="rule-desc">Reaction when creature leaves your melee reach. One melee attack. Shortsword, not longbow.</span></div>
+    <div class="key-rule"><span class="rule-name">Cover:</span> <span class="rule-desc">Half cover = +2 AC. Three-quarters = +5 AC. Full = can't be targeted. Sharpshooter ignores half and ¾.</span></div>
+    <div class="key-rule"><span class="rule-name">Longbow range:</span> <span class="rule-desc">Normal 150 ft, long 600 ft. Long range = disadvantage (unless Sharpshooter). No minimum distance.</span></div>
+    <div class="key-rule"><span class="rule-name">Armor upgrade:</span> <span class="rule-desc">Studded leather (45 gp) → AC 15. First purchase priority. Avoid medium armor — Stealth disadvantage ruins Gloom Stalker.</span></div>
+  </div>
+
+</div>
+
+</body>
+</html>
