@@ -15,6 +15,7 @@ guides/           Numbered tutorial sequence (read in order)
 reference/        Detailed lookup docs for character creation
 example-build/    Complete worked character (Fūsetsu, Gloom Stalker Ranger)
 prompt.md         AI-assisted character creation template
+docs/             GitHub Pages (ericosg.github.io/DnD): index.html = Fūsetsu's sheet, carn/ = Càrn Stonehum's A3 sheet
 ```
 
 ### Tutorial Sequence (`guides/00–07`)

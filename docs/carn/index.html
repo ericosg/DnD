@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1180">
+<title>Càrn Stonehum — Character Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Alegreya+Sans+SC:wght@500;700;800&display=swap">
+<style>
+  @page { size: A3 portrait; margin: 0; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #7d8387; }
+  body {
+    font-family: "Alegreya Sans", "Gill Sans", "Trebuchet MS", sans-serif;
+    font-size: 12pt;
+    line-height: 1.3;
+    color: #111;
+    padding: 8mm 0;
+  }
+
+  .page {
+    width: 297mm;
+    height: 420mm;
+    margin: 0 auto 8mm;
+    background: #fff;
+    padding: 12mm;
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+    overflow: hidden;
+    box-shadow: 0 2mm 8mm rgba(0,0,0,0.35);
+  }
+  @media print {
+    html, body { background: #fff; padding: 0; }
+    .page { margin: 0; box-shadow: none; break-after: page; }
+    .page:last-child { break-after: auto; }
+  }
+
+  /* ── Shared pieces ── */
+  .box {
+    border: 0.45mm solid #111;
+    border-radius: 3mm;
+    padding: 3mm 3.5mm;
+    position: relative;
+  }
+  .label {
+    font-family: "Alegreya Sans SC", "Gill Sans", sans-serif;
+    font-weight: 800;
+    font-size: 9pt;
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: #111;
+  }
+  .label.under { margin-top: 1.5mm; }
+  .label.over { margin-bottom: 1.8mm; }
+  .muted { color: #555; }
+  .small { font-size: 9.5pt; }
+  .tiny { font-size: 8.5pt; }
+  .num { font-variant-numeric: tabular-nums; }
+  .dot {
+    display: inline-block;
+    width: 3.4mm; height: 3.4mm;
+    border: 0.35mm solid #111;
+    border-radius: 50%;
+    vertical-align: -0.5mm;
+    margin-right: 1.8mm;
+    flex: none;
+  }
+  .dot.on { background: #111; }
+  .check {
+    display: inline-block;
+    width: 4.2mm; height: 4.2mm;
+    border: 0.35mm solid #111;
+    border-radius: 50%;
+    vertical-align: -0.9mm;
+    margin-left: 1.2mm;
+  }
+  .lines {
+    flex: 1;
+    background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 7.4mm, #c9c9c9 7.4mm, #c9c9c9 7.6mm);
+    min-height: 8mm;
+  }
+
+  /* ── Header ── */
+  .head {
+    display: grid;
+    grid-template-columns: 98mm 1fr;
+    gap: 5mm;
+    align-items: stretch;
+  }
+  .namebox {
+    border: 0.45mm solid #111;
+    border-radius: 3mm;
+    padding: 3mm 5mm 2.5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .namebox .name {
+    font-family: "Uncial Antiqua", "Palatino Linotype", Georgia, serif;
+    font-size: 30pt;
+    line-height: 1;
+    border-bottom: 0.3mm solid #111;
+    padding-bottom: 2mm;
+  }
+  .namebox .label { text-align: left; margin-top: 1.5mm; }
+  .fields {
+    border: 0.45mm solid #111;
+    border-radius: 3mm;
+    padding: 3mm 5mm;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5mm;
+    row-gap: 3mm;
+  }
+  .field .v {
+    font-size: 13pt;
+    font-weight: 700;
+    border-bottom: 0.3mm solid #111;
+    padding-bottom: 1mm;
+    min-height: 7mm;
+    white-space: nowrap;
+  }
+  .field .label { text-align: left; font-size: 8.5pt; margin-top: 1mm; }
+
+  /* ── Body columns ── */
+  .cols {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.08fr 1fr 1fr;
+    gap: 5mm;
+    min-height: 0;
+  }
+  .col { display: flex; flex-direction: column; gap: 4mm; min-height: 0; }
+
+  /* Left column: abilities rail + saves/skills */
+  .left-top { display: grid; grid-template-columns: 27mm 1fr; gap: 4mm; }
+  .abilities {
+    background: #e9e9e9;
+    border-radius: 3mm;
+    padding: 2.5mm;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5mm;
+  }
+  .ab {
+    background: #fff;
+    border: 0.45mm solid #111;
+    border-radius: 3mm;
+    text-align: center;
+    padding: 1.8mm 1mm 0;
+    height: 34mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ab .label { font-size: 7.8pt; }
+  .ab .mod { font-size: 25pt; font-weight: 800; line-height: 1.1; margin-top: 1mm; }
+  .ab .score {
+    margin-top: auto;
+    margin-bottom: -2.5mm;
+    background: #fff;
+    border: 0.45mm solid #111;
+    border-radius: 50%;
+    width: 14mm;
+    height: 8mm;
+    line-height: 7mm;
+    font-weight: 700;
+    font-size: 12pt;
+  }
+  .stack { display: flex; flex-direction: column; gap: 3mm; }
+  .pill {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    border: 0.45mm solid #111;
+    border-radius: 3mm;
+    padding: 1.6mm 3mm;
+  }
+  .pill .sq {
+    width: 11mm; height: 9mm;
+    border: 0.45mm solid #111;
+    border-radius: 1.5mm;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 13pt;
+  }
+  .pill .label { text-align: left; }
+  ul.rows { list-style: none; display: grid; gap: 1.05mm; }
+  ul.rows li { display: flex; align-items: center; font-size: 11pt; }
+  ul.rows .val {
+    width: 9mm;
+    border-bottom: 0.3mm solid #111;
+    text-align: center;
+    font-weight: 700;
+    margin-right: 2mm;
+    font-variant-numeric: tabular-nums;
+  }
+  ul.rows .ab3 { color: #666; font-size: 8.5pt; margin-left: 1.2mm; }
+  ul.rows .note { color: #555; font-size: 8.5pt; margin-left: auto; padding-left: 2mm; }
+
+  .passive { display: flex; align-items: center; gap: 3mm; }
+  .passive .sq { width: 13mm; }
+  .grow { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .prof p { font-size: 10.5pt; margin-bottom: 1.8mm; }
+  .prof b { font-family: "Alegreya Sans SC", sans-serif; letter-spacing: 0.05em; font-size: 9pt; }
+
+  /* Middle column */
+  .combat { background: #e9e9e9; border-radius: 3mm; padding: 3mm; display: flex; flex-direction: column; gap: 3mm; }
+  .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .shield, .tile {
+    background: #fff;
+    border: 0.45mm solid #111;
+    border-radius: 3mm;
+    text-align: center;
+    padding: 2.5mm 1mm 2mm;
+  }
+  .shield { border-radius: 3mm 3mm 50% 50% / 3mm 3mm 22% 22%; }
+  .shield .big, .tile .big { font-size: 24pt; font-weight: 800; line-height: 1.1; }
+  .sub { font-size: 8.5pt; color: #555; }
+  .hp { background: #fff; border: 0.45mm solid #111; border-radius: 3mm; padding: 2.5mm 3.5mm 2mm; }
+  .hp .maxrow { display: flex; justify-content: space-between; border-bottom: 0.3mm solid #999; padding-bottom: 1mm; font-size: 10pt; }
+  .hp .write { height: 22mm; }
+  .hp.temp .write { height: 13mm; }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .duo > div { background: #fff; border: 0.45mm solid #111; border-radius: 3mm; padding: 2.5mm 3mm 2mm; }
+  .hd .tot { font-size: 10pt; border-bottom: 0.3mm solid #999; padding-bottom: 1mm; }
+  .hd .write { height: 11mm; }
+  .ds { display: grid; gap: 1.5mm; font-size: 9.5pt; }
+  .ds div { display: flex; justify-content: space-between; align-items: center; }
+  .ds div > span:last-child { white-space: nowrap; }
+  .notes { border: 0.45mm solid #111; border-radius: 3mm; padding: 3mm 3.5mm 2mm; flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+  table.atk { width: 100%; border-collapse: separate; border-spacing: 0 1.4mm; font-size: 10.5pt; }
+  table.atk th { font-family: "Alegreya Sans SC", sans-serif; font-weight: 800; font-size: 8.5pt; letter-spacing: 0.06em; text-align: left; padding: 0 1.5mm; }
+  table.atk td { background: #efefef; padding: 1.4mm 1.5mm; vertical-align: top; }
+  table.atk td:first-child { border-radius: 1.5mm 0 0 1.5mm; font-weight: 700; }
+  table.atk td:last-child { border-radius: 0 1.5mm 1.5mm 0; }
+  table.atk td.c { text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+  table.atk tr.blank td { height: 7mm; }
+  .atknotes { font-size: 9.5pt; line-height: 1.35; margin-top: 1.5mm; }
+
+  .equip { display: grid; grid-template-columns: 17mm 1fr; gap: 3mm; flex: 1; min-height: 0; }
+  .coins { display: flex; flex-direction: column; gap: 1.8mm; }
+  .coin { border: 0.45mm solid #111; border-radius: 2mm; text-align: center; padding: 0.8mm 0; }
+  .coin .label { font-size: 7.5pt; }
+  .coin .v { font-weight: 800; font-size: 12pt; min-height: 6mm; }
+  .gear { font-size: 10pt; line-height: 1.38; display: flex; flex-direction: column; }
+  .gear ul { list-style: none; }
+  .gear li { border-bottom: 0.25mm solid #d2d2d2; padding: 0.7mm 0; }
+
+  /* Right column */
+  .persona { background: #e9e9e9; border-radius: 3mm; padding: 3mm; display: flex; flex-direction: column; gap: 3mm; }
+  .persona .box { background: #fff; font-size: 10.5pt; line-height: 1.35; }
+  .feat { font-size: 10pt; line-height: 1.36; display: flex; flex-direction: column; gap: 1.9mm; }
+  .feat h4 { font-size: 10.5pt; font-weight: 800; }
+  .feat h4 .src { font-weight: 400; color: #666; font-size: 8.5pt; }
+  .feat .grp {
+    font-family: "Alegreya Sans SC", sans-serif; font-weight: 800; letter-spacing: 0.07em;
+    font-size: 8.5pt; color: #444; border-bottom: 0.3mm solid #111; padding-bottom: 0.6mm; margin-top: 1mm;
+  }
+  .crystal-note { border-left: 1mm solid #111; padding-left: 2.5mm; }
+
+  .foot { display: flex; justify-content: space-between; font-size: 8.5pt; color: #666; }
+
+  /* ── Page 2: cheat sheet ── */
+  .p2head { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 0.6mm solid #111; padding-bottom: 2.5mm; }
+  .p2head h1 { font-family: "Uncial Antiqua", Georgia, serif; font-weight: 400; font-size: 26pt; line-height: 1; }
+  .p2head .sub { font-size: 11pt; }
+  .rage {
+    border: 0.7mm solid #111;
+    border-radius: 3mm;
+    padding: 4mm 5mm;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 6mm;
+    background: #f1f1f1;
+  }
+  .rage h2 { font-size: 15pt; font-weight: 800; margin-bottom: 1.5mm; }
+  .rage h3 { font-family: "Alegreya Sans SC", sans-serif; font-weight: 800; font-size: 9.5pt; letter-spacing: 0.07em; margin-bottom: 1mm; }
+  .rage ul { padding-left: 4.5mm; font-size: 10.5pt; line-height: 1.38; }
+  .rage p { font-size: 10.5pt; line-height: 1.38; }
+  .sect {
+    font-family: "Alegreya Sans SC", sans-serif; font-weight: 800; letter-spacing: 0.08em;
+    font-size: 10.5pt; background: #111; color: #fff; padding: 1.2mm 3mm; border-radius: 1.5mm;
+  }
+  .turns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+  .turn { border: 0.45mm solid #111; border-radius: 3mm; padding: 3mm 3.5mm; font-size: 10.5pt; line-height: 1.38; }
+  .turn h4 { font-size: 11.5pt; font-weight: 800; margin-bottom: 1.2mm; }
+  .turn h4 .when { font-weight: 400; color: #666; font-size: 9pt; }
+  .turn ol { padding-left: 5mm; }
+  .turn .tip { font-size: 9.5pt; color: #444; margin-top: 1.5mm; font-style: italic; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; flex: 1; min-height: 0; }
+  table.prog { width: 100%; border-collapse: collapse; font-size: 10.5pt; line-height: 1.35; }
+  table.prog th { font-family: "Alegreya Sans SC", sans-serif; font-weight: 800; letter-spacing: 0.06em; font-size: 9pt; text-align: left; padding: 1.2mm 2mm; border-bottom: 0.45mm solid #111; }
+  table.prog td { padding: 1.4mm 2mm; border-bottom: 0.25mm solid #cfcfcf; vertical-align: top; }
+  table.prog td:first-child { font-weight: 800; width: 11mm; font-variant-numeric: tabular-nums; }
+  table.prog tr.now td { background: #ececec; }
+  .rules { display: grid; gap: 2.2mm; font-size: 10.5pt; line-height: 1.38; }
+  .rules b { font-weight: 800; }
+  .blessing { border: 0.45mm solid #111; border-radius: 3mm; padding: 3mm 4mm; display: flex; justify-content: space-between; align-items: baseline; gap: 6mm; }
+  .blessing .gd { font-family: "Uncial Antiqua", Georgia, serif; font-size: 14pt; }
+  .blessing .en { font-style: italic; font-size: 10.5pt; color: #333; }
+  .rcol { display: flex; flex-direction: column; gap: 4mm; min-height: 0; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ PAGE 1 · CHARACTER SHEET ═══════════════ -->
+<div class="page">
+
+  <div class="head">
+    <div class="namebox">
+      <div class="name">Càrn Stonehum</div>
+      <div class="label">Character Name</div>
+    </div>
+    <div class="fields">
+      <div class="field"><div class="v">Barbarian 3</div><div class="label">Class &amp; Level</div></div>
+      <div class="field"><div class="v">Stonehum Miner</div><div class="label">Background (custom)</div></div>
+      <div class="field"><div class="v">Eric</div><div class="label">Player Name</div></div>
+      <div class="field"><div class="v">Dwarf (Shield · Mountain)</div><div class="label">Race</div></div>
+      <div class="field"><div class="v">Neutral Good</div><div class="label">Alignment</div></div>
+      <div class="field"><div class="v">900</div><div class="label">Experience Points</div></div>
+    </div>
+  </div>
+
+  <div class="cols">
+
+    <!-- ── LEFT ── -->
+    <div class="col">
+      <div class="left-top">
+        <div class="abilities">
+          <div class="ab"><div class="label">Strength</div><div class="mod">+3</div><div class="score">17</div></div>
+          <div class="ab"><div class="label">Dexterity</div><div class="mod">+1</div><div class="score">13</div></div>
+          <div class="ab"><div class="label">Constitution</div><div class="mod">+3</div><div class="score">16</div></div>
+          <div class="ab"><div class="label">Intelligence</div><div class="mod">−1</div><div class="score">8</div></div>
+          <div class="ab"><div class="label">Wisdom</div><div class="mod">+1</div><div class="score">12</div></div>
+          <div class="ab"><div class="label">Charisma</div><div class="mod">+0</div><div class="score">10</div></div>
+        </div>
+
+        <div class="stack">
+          <div class="pill"><div class="sq"></div><div class="label">Inspiration</div></div>
+          <div class="pill"><div class="sq">+2</div><div class="label">Proficiency Bonus</div></div>
+
+          <div class="box">
+            <ul class="rows">
+              <li><span class="dot on"></span><span class="val">+5</span>Strength</li>
+              <li><span class="dot"></span><span class="val">+1</span>Dexterity<span class="note">adv.: Danger Sense</span></li>
+              <li><span class="dot on"></span><span class="val">+5</span>Constitution</li>
+              <li><span class="dot"></span><span class="val">−1</span>Intelligence</li>
+              <li><span class="dot"></span><span class="val">+1</span>Wisdom</li>
+              <li><span class="dot"></span><span class="val">+0</span>Charisma</li>
+            </ul>
+            <div class="label under">Saving Throws</div>
+            <div class="tiny muted" style="text-align:center;margin-top:0.8mm">Advantage on saves vs. poison (dwarf)</div>
+          </div>
+
+          <div class="box">
+            <ul class="rows">
+              <li><span class="dot"></span><span class="val">+1</span>Acrobatics<span class="ab3">(Dex)</span></li>
+              <li><span class="dot"></span><span class="val">+1</span>Animal Handling<span class="ab3">(Wis)</span></li>
+              <li><span class="dot"></span><span class="val">−1</span>Arcana<span class="ab3">(Int)</span></li>
+              <li><span class="dot on"></span><span class="val">+5</span>Athletics<span class="ab3">(Str)</span><span class="note">adv. raging</span></li>
+              <li><span class="dot"></span><span class="val">+0</span>Deception<span class="ab3">(Cha)</span></li>
+              <li><span class="dot"></span><span class="val">−1</span>History<span class="ab3">(Int)</span><span class="note">stone: +3</span></li>
+              <li><span class="dot"></span><span class="val">+1</span>Insight<span class="ab3">(Wis)</span></li>
+              <li><span class="dot"></span><span class="val">+0</span>Intimidation<span class="ab3">(Cha)</span></li>
+              <li><span class="dot"></span><span class="val">−1</span>Investigation<span class="ab3">(Int)</span></li>
+              <li><span class="dot on"></span><span class="val">+3</span>Medicine<span class="ab3">(Wis)</span></li>
+              <li><span class="dot"></span><span class="val">−1</span>Nature<span class="ab3">(Int)</span></li>
+              <li><span class="dot on"></span><span class="val">+3</span>Perception<span class="ab3">(Wis)</span></li>
+              <li><span class="dot on"></span><span class="val">+2</span>Performance<span class="ab3">(Cha)</span></li>
+              <li><span class="dot"></span><span class="val">+0</span>Persuasion<span class="ab3">(Cha)</span></li>
+              <li><span class="dot"></span><span class="val">−1</span>Religion<span class="ab3">(Int)</span></li>
+              <li><span class="dot"></span><span class="val">+1</span>Sleight of Hand<span class="ab3">(Dex)</span></li>
+              <li><span class="dot"></span><span class="val">+1</span>Stealth<span class="ab3">(Dex)</span></li>
+              <li><span class="dot"></span><span class="val">+1</span>Survival<span class="ab3">(Wis)</span></li>
+            </ul>
+            <div class="label under">Skills</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pill passive"><div class="sq">13</div><div class="label">Passive Wisdom (Perception)</div></div>
+
+      <div class="box grow prof">
+        <p><b>Armor</b> — Light, medium, shields <span class="muted">(never worn)</span></p>
+        <p><b>Weapons</b> — Simple, martial. Dwarven training: battleaxe, handaxe, light hammer, warhammer.</p>
+        <p><b>Tools</b> — Mason's tools, brewer's supplies</p>
+        <p><b>Languages</b> — Common, Dwarvish, Undercommon</p>
+        <div class="lines"></div>
+        <div class="label under">Other Proficiencies &amp; Languages</div>
+      </div>
+    </div>
+
+    <!-- ── MIDDLE ── -->
+    <div class="col">
+      <div class="combat">
+        <div class="trio">
+          <div class="shield"><div class="big">14</div><div class="label">Armor Class</div><div class="sub">10 + DEX + CON · no armor</div></div>
+          <div class="tile"><div class="big">+1</div><div class="label">Initiative</div><div class="sub">&nbsp;</div></div>
+          <div class="tile"><div class="big">25</div><div class="label">Speed</div><div class="sub">ft · heavy armor doesn't slow</div></div>
+        </div>
+        <div class="hp">
+          <div class="maxrow"><span class="label">Hit Point Maximum</span><b class="num">35</b></div>
+          <div class="write"></div>
+          <div class="label">Current Hit Points</div>
+        </div>
+        <div class="hp temp">
+          <div class="write"></div>
+          <div class="label">Temporary Hit Points</div>
+        </div>
+        <div class="duo">
+          <div class="hd">
+            <div class="tot"><span class="label" style="display:inline">Total</span> <b>3d12</b> <span class="sub">(+3 each)</span></div>
+            <div class="write"></div>
+            <div class="label">Hit Dice</div>
+          </div>
+          <div>
+            <div class="ds">
+              <div><span class="label">Successes</span><span><span class="check"></span><span class="check"></span><span class="check"></span></span></div>
+              <div><span class="label">Failures</span><span><span class="check"></span><span class="check"></span><span class="check"></span></span></div>
+            </div>
+            <div class="label under">Death Saves</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <table class="atk">
+          <thead><tr><th>Name</th><th style="text-align:center">Atk Bonus</th><th>Damage / Type</th></tr></thead>
+          <tbody>
+            <tr><td>Mining mattock</td><td class="c">+5</td><td>1d12+3 piercing<br><span class="tiny muted">heavy, two-handed · raging 1d12+5</span></td></tr>
+            <tr><td>Rock hammer ×2</td><td class="c">+5</td><td>1d6+3 bludgeoning<br><span class="tiny muted">light · thrown 20/60 ft</span></td></tr>
+            <tr><td>Drill steel ×4</td><td class="c">+5</td><td>1d6+3 piercing<br><span class="tiny muted">thrown 30/120 ft</span></td></tr>
+            <tr><td>Unarmed strike</td><td class="c">+5</td><td>4 bludgeoning</td></tr>
+            <tr class="blank"><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <div class="atknotes">
+          <b>Rage:</b> +2 damage on melee attacks using STR (not thrown). <b>Reckless Attack:</b> advantage on STR melee this turn; enemies get advantage on you until your next turn.<br>
+          <b>Rituals</b> (not while raging, +10 min): <i>Beast Sense</i>, <i>Speak with Animals</i>.
+        </div>
+        <div class="label under">Attacks &amp; Spellcasting</div>
+      </div>
+
+      <div class="box grow">
+        <div class="equip">
+          <div class="coins">
+            <div class="coin"><div class="label">CP</div><div class="v"></div></div>
+            <div class="coin"><div class="label">SP</div><div class="v"></div></div>
+            <div class="coin"><div class="label">EP</div><div class="v"></div></div>
+            <div class="coin"><div class="label">GP</div><div class="v">5</div></div>
+            <div class="coin"><div class="label">PP</div><div class="v"></div></div>
+          </div>
+          <div class="gear">
+            <ul>
+              <li><b>Mining mattock</b> · 2 rock hammers · 4 drill steels</li>
+              <li><b>Explorer's pack:</b> backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days of rations, waterskin, 50 ft hempen rope</li>
+              <li>Mason's tools · maker's-mark chisel (the Stonehum mark)</li>
+              <li>Traveler's clothes · <b>the big coat</b> (deep wool-lined pocket)</li>
+              <li>Crystal sliver on a cord <span class="muted">(totem)</span></li>
+              <li>Da's battered pewter tankard</li>
+              <li>Pouch: coal, rock salt, candle stub, moss</li>
+              <li>A gem worth 10 gp <span class="muted">(life's savings)</span></li>
+            </ul>
+            <div class="lines"></div>
+          </div>
+        </div>
+        <div class="label under">Equipment</div>
+      </div>
+    </div>
+
+    <!-- ── RIGHT ── -->
+    <div class="col">
+      <div class="persona">
+        <div class="box">He hums while he works, while he worries and while he eats. Always hums. He takes everyone at their word. It's never occurred to him that folk lie, except himself, badly.<div class="label under">Personality Traits</div></div>
+        <div class="box">Honest work. You dig, you hand it in, you sleep sound. <span class="muted">(He knows he's broken that now.)</span><div class="label under">Ideals</div></div>
+        <div class="box">The wee one. He'd walk into a dragon's mouth for it.<div class="label under">Bonds</div></div>
+        <div class="box">A terrible liar. Every question about his coat gets a worse excuse than the last.<div class="label under">Flaws</div></div>
+      </div>
+
+      <div class="box grow">
+        <div class="feat">
+          <div class="grp">Barbarian</div>
+          <div><h4>Rage <span class="src">3 / long rest</span><span class="check"></span><span class="check"></span><span class="check"></span></h4>Bonus action, 1 minute. +2 melee STR damage, advantage on STR checks &amp; saves, resistance to bludgeoning, piercing, slashing. No spells or concentration. See page 2.</div>
+          <div><h4>Unarmored Defense</h4>AC = 10 + DEX + CON while wearing no armor.</div>
+          <div><h4>Reckless Attack</h4>First attack on your turn: advantage on STR melee attacks this turn; attacks against you have advantage until your next turn.</div>
+          <div><h4>Danger Sense</h4>Advantage on DEX saves against effects you can see (traps, spells), unless blinded, deafened or incapacitated.</div>
+          <div class="grp">Path of the Totem Warrior</div>
+          <div><h4>Totem Spirit: Bear</h4>While raging, resistance to <b>all damage except psychic</b>.</div>
+          <div class="crystal-note">Totem object: the crystal sliver the wee one shed. When he rages, crystal flecks spread across his skin.</div>
+          <div><h4>Spirit Seeker</h4><i>Beast Sense</i> and <i>Speak with Animals</i> as rituals.</div>
+          <div class="grp">Dwarf</div>
+          <div><h4>Darkvision 60 ft · Dwarven Resilience</h4>Advantage on saves vs. poison; resistance to poison damage.</div>
+          <div><h4>Stonecunning</h4>History checks about stonework: proficient, double bonus (+3).</div>
+          <div class="grp">Background: Stonehum Miner</div>
+          <div><h4>Discovery</h4>Deep in an old seam he unearthed something unique: <b>the wee one</b>. Its nature is the DM's to reveal.</div>
+          <div class="lines"></div>
+        </div>
+        <div class="label under">Features &amp; Traits</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Càrn Stonehum · shield dwarf of Citadel Adbar · say it “KAARRN”</span><span>Page 1 of 2 · print both sides on A3</span></div>
+</div>
+
+<!-- ═══════════════ PAGE 2 · COMBAT CHEAT SHEET ═══════════════ -->
+<div class="page">
+  <div class="p2head">
+    <h1>Càrn — Combat &amp; Reference</h1>
+    <div class="sub">Barbarian 3 · Totem Warrior (Bear) · print back-to-back with the character sheet</div>
+  </div>
+
+  <div class="rage">
+    <div>
+      <h2>RAGE</h2>
+      <p><b>Bonus action</b> to start. Lasts <b>1 minute</b> (10 rounds). <b>3 per long rest.</b></p>
+      <p style="margin-top:1.8mm">The quiet old miner becomes something else entirely when someone threatens the wee one.</p>
+    </div>
+    <div>
+      <h3>While raging</h3>
+      <ul>
+        <li>+2 damage on melee attacks using STR</li>
+        <li>Advantage on STR checks and STR saves (Athletics +5 with advantage)</li>
+        <li><b>Bear:</b> resistance to <b>everything except psychic</b>. Halve the damage.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Rage ends when</h3>
+      <ul>
+        <li>1 minute passes, or you're knocked unconscious</li>
+        <li>Your turn ends and you <b>haven't attacked</b> a hostile creature or <b>taken damage</b> since your last turn</li>
+        <li>You end it (bonus action)</li>
+      </ul>
+      <h3 style="margin-top:2mm">Can't while raging</h3>
+      <ul><li>Cast spells or rituals, or concentrate</li></ul>
+    </div>
+  </div>
+
+  <div class="sect">Combat Turns</div>
+  <div class="turns">
+    <div class="turn">
+      <h4>Opening turn <span class="when">round 1</span></h4>
+      <ol>
+        <li><b>Bonus action:</b> Rage</li>
+        <li><b>Move</b> up to 25 ft</li>
+        <li><b>Action:</b> Attack with the mattock. Reckless → roll twice, take the higher. <b>+5</b> to hit · <b>1d12+5</b></li>
+      </ol>
+      <div class="tip">Enemies now have advantage on you, but you're halving nearly everything.</div>
+    </div>
+    <div class="turn">
+      <h4>Raging turn <span class="when">rounds 2+</span></h4>
+      <ol>
+        <li><b>Action:</b> Mattock attack (Reckless if you want it) · <b>1d12+5</b></li>
+        <li><b>Move</b> before or after</li>
+        <li><b>Keep it alive:</b> attack something every turn</li>
+      </ol>
+      <div class="tip">No bonus action to spend yet. Level 5 brings a second swing.</div>
+    </div>
+    <div class="turn">
+      <h4>Can't reach it <span class="when">flying / far away</span></h4>
+      <ol>
+        <li><b>Action:</b> Throw a drill steel · <b>+5</b> · 1d6+3 · 30/120 ft</li>
+        <li>Or a rock hammer · 20/60 ft</li>
+        <li>Thrown attacks still keep a rage going, but get no rage damage</li>
+      </ol>
+      <div class="tip">Throwing at something next to you: disadvantage.</div>
+    </div>
+    <div class="turn">
+      <h4>Shove or grab <span class="when">replaces one attack</span></h4>
+      <ol>
+        <li>Athletics <b>+5</b> (advantage raging) vs. their Athletics or Acrobatics</li>
+        <li><b>Shove:</b> knock prone, or push 5 ft</li>
+        <li><b>Grapple:</b> their speed becomes 0</li>
+      </ol>
+      <div class="tip">Prone target: melee attacks against it have advantage.</div>
+    </div>
+    <div class="turn">
+      <h4>Protect the wee one</h4>
+      <ol>
+        <li>Stand between it and the threat</li>
+        <li>Opportunity attack (reaction) when an enemy leaves your reach</li>
+        <li>Rage + Bear = you are the wall</li>
+      </ol>
+      <div class="tip">Level 14: enemies next to you have disadvantage attacking anyone else.</div>
+    </div>
+    <div class="turn">
+      <h4>A friend is down</h4>
+      <ol>
+        <li><b>Action:</b> Medicine <b>+3</b>, DC 10, to stabilize</li>
+        <li>Or carry them out: STR 17, carrying capacity 255 lb</li>
+      </ol>
+      <div class="tip">Two centuries of patching up the crew after cave-ins.</div>
+    </div>
+  </div>
+
+  <div class="two">
+    <div class="rcol">
+      <div class="sect">Level Progression</div>
+      <table class="prog">
+        <thead><tr><th>Level</th><th>What Càrn gets</th></tr></thead>
+        <tbody>
+          <tr class="now"><td>3</td><td>Rage (3), Unarmored Defense, Reckless Attack, Danger Sense, Totem Warrior: Spirit Seeker + Bear</td></tr>
+          <tr><td>4</td><td>Ability Score Improvement: plan +1 STR (18) and +1 CON (17), or a feat</td></tr>
+          <tr><td>5</td><td><b>Extra Attack</b> (two swings per Attack action), Fast Movement +10 ft (35 ft)</td></tr>
+          <tr><td>6</td><td><b>Aspect of the Beast (Bear):</b> double carrying capacity; advantage on STR checks to push, pull, lift or break. 4 rages.</td></tr>
+          <tr><td>7</td><td><b>Feral Instinct:</b> advantage on initiative; if surprised, rage first and act normally</td></tr>
+          <tr><td>8</td><td>Ability Score Improvement or feat</td></tr>
+          <tr><td>9</td><td><b>Brutal Critical:</b> one extra d12 on a critical hit. Rage damage +3.</td></tr>
+          <tr><td>10</td><td><b>Spirit Walker:</b> <i>Commune with Nature</i> as a ritual</td></tr>
+        </tbody>
+      </table>
+      <div class="sect">Resting</div>
+      <div class="rules">
+        <div><b>Short rest (1 hour):</b> spend hit dice. Each heals <b>1d12+3</b>.</div>
+        <div><b>Long rest (8 hours):</b> regain all HP, all 3 rages, and half your hit dice (min. 1).</div>
+      </div>
+      <div class="notes"><div class="lines"></div><div class="label under">Session Notes</div></div>
+    </div>
+    <div class="rcol">
+      <div class="sect">Key Rules</div>
+      <div class="rules">
+        <div><b>Reckless Attack:</b> decide on your first attack of the turn. Only STR melee attacks get advantage.</div>
+        <div><b>Danger Sense:</b> advantage on DEX saves against effects you can see: traps, fireballs, falling rock.</div>
+        <div><b>Opportunity attack:</b> reaction, one melee attack when an enemy leaves your reach.</div>
+        <div><b>Drawing weapons:</b> one free object interaction per turn; drawing a second weapon costs an action.</div>
+        <div><b>Two-handed:</b> the mattock needs both hands. You can drop it for free.</div>
+        <div><b>Death saves:</b> d20 at 0 HP. 10+ success, 9− failure. Three of either decides it. Natural 20 = back up with 1 HP; natural 1 = two failures.</div>
+        <div><b>Darkvision 60 ft:</b> darkness looks like dim light, in shades of grey.</div>
+        <div><b>Poison:</b> advantage on saves, resistance to damage (dwarf).</div>
+        <div><b>Stonecunning:</b> +3 on History about stonework. Ask the DM when stone looks wrong.</div>
+        <div><b>Rituals:</b> <i>Speak with Animals</i> and <i>Beast Sense</i> take 1 action + 10 minutes as rituals. Never while raging.</div>
+      </div>
+      <div class="notes"><div class="lines"></div><div class="label under">What We've Learned About the Wee One</div></div>
+      <div class="blessing">
+        <span class="gd">Cuiridh mi clach air do chàrn.</span>
+        <span class="en">“I'll put a stone on your cairn.” I'll not forget you.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Càrn Stonehum · Clan Stonehum sings while it digs</span><span>Page 2 of 2</span></div>
+</div>
+
+</body>
+</html>
